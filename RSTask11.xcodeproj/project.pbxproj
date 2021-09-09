@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */; };
 		3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D97126E883D500ECB3D8 /* AppDelegate.swift */; };
 		3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97A26E883D600ECB3D8 /* Assets.xcassets */; };
 		3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */; };
 		3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D98626E8869500ECB3D8 /* Assets.swift */; };
 		3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */; };
 		3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */; };
+		3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Transitions.swift"; sourceTree = "<group>"; };
 		3F95D96E26E883D500ECB3D8 /* RSTask11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95D97126E883D500ECB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95D97A26E883D600ECB3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		3F95D98626E8869500ECB3D8 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6E904A26E9E62800A9FA49 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */,
+				3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		3F95D96526E883D500ECB3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		3F95D97026E883D500ECB3D8 /* RSTask11 */ = {
 			isa = PBXGroup;
 			children = (
+				3F95D98D26E8A09600ECB3D8 /* Screens */,
 				3F95D98526E8867C00ECB3D8 /* Resourses */,
 				3F95D97126E883D500ECB3D8 /* AppDelegate.swift */,
 				3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */,
@@ -81,6 +95,14 @@
 				3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F95D98D26E8A09600ECB3D8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E904A26E9E62800A9FA49 /* TabBarController */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
+				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
