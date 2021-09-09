@@ -11,6 +11,12 @@
 		3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */; };
 		3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */; };
 		3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */; };
+		3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905526EA3BD200A9FA49 /* LaunchCell.swift */; };
+		3F6E905826EA3BD200A9FA49 /* LaunchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E905626EA3BD200A9FA49 /* LaunchCell.xib */; };
+		3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */; };
+		3F6E906026EA4A6A00A9FA49 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */; };
+		3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */; };
+		3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */; };
 		3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D97126E883D500ECB3D8 /* AppDelegate.swift */; };
 		3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97A26E883D600ECB3D8 /* Assets.xcassets */; };
 		3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */; };
@@ -25,6 +31,12 @@
 		3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
 		3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
 		3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketCell.xib; sourceTree = "<group>"; };
+		3F6E905526EA3BD200A9FA49 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
+		3F6E905626EA3BD200A9FA49 /* LaunchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchCell.xib; sourceTree = "<group>"; };
+		3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
+		3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedButton.swift; sourceTree = "<group>"; };
 		3F95D96E26E883D500ECB3D8 /* RSTask11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95D97126E883D500ECB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95D97A26E883D600ECB3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,11 +71,48 @@
 		3F6E904D26E9EE0300A9FA49 /* RocketListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3F6E906226EA4BA600A9FA49 /* Cell */,
 				3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */,
+			);
+			path = RocketListViewController;
+			sourceTree = "<group>";
+		};
+		3F6E905426EA3BA900A9FA49 /* LaunchesListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E906126EA4B9C00A9FA49 /* CustomView */,
+				3F6E906326EA4BC300A9FA49 /* Cell */,
+				3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */,
+			);
+			path = LaunchesListViewController;
+			sourceTree = "<group>";
+		};
+		3F6E906126EA4B9C00A9FA49 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */,
+				3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */,
+				3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3F6E906226EA4BA600A9FA49 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */,
 				3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */,
 			);
-			path = RocketListViewController;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3F6E906326EA4BC300A9FA49 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E905526EA3BD200A9FA49 /* LaunchCell.swift */,
+				3F6E905626EA3BD200A9FA49 /* LaunchCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3F95D96526E883D500ECB3D8 = {
@@ -116,6 +165,7 @@
 		3F95D98D26E8A09600ECB3D8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3F6E905426EA3BA900A9FA49 /* LaunchesListViewController */,
 				3F6E904D26E9EE0300A9FA49 /* RocketListViewController */,
 				3F6E904A26E9E62800A9FA49 /* TabBarController */,
 			);
@@ -181,6 +231,7 @@
 			files = (
 				3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */,
 				3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */,
+				3F6E905826EA3BD200A9FA49 /* LaunchCell.xib in Resources */,
 				3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */,
 				3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */,
 				3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */,
@@ -197,8 +248,13 @@
 				3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */,
 				3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
+				3F6E906026EA4A6A00A9FA49 /* NumberView.swift in Sources */,
+				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
+				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
 				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
+				3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */,
+				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
