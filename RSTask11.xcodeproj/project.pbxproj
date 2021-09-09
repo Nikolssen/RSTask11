@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */; };
+		3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */; };
+		3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */; };
+		3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */; };
 		3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D97126E883D500ECB3D8 /* AppDelegate.swift */; };
 		3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97A26E883D600ECB3D8 /* Assets.xcassets */; };
 		3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Transitions.swift"; sourceTree = "<group>"; };
+		3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
+		3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
+		3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketCell.xib; sourceTree = "<group>"; };
 		3F95D96E26E883D500ECB3D8 /* RSTask11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95D97126E883D500ECB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95D97A26E883D600ECB3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +54,16 @@
 				3F6E904B26E9E66F00A9FA49 /* TabBarController+Transitions.swift */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		3F6E904D26E9EE0300A9FA49 /* RocketListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */,
+				3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */,
+				3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */,
+			);
+			path = RocketListViewController;
 			sourceTree = "<group>";
 		};
 		3F95D96526E883D500ECB3D8 = {
@@ -100,6 +116,7 @@
 		3F95D98D26E8A09600ECB3D8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3F6E904D26E9EE0300A9FA49 /* RocketListViewController */,
 				3F6E904A26E9E62800A9FA49 /* TabBarController */,
 			);
 			path = Screens;
@@ -165,6 +182,7 @@
 				3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */,
 				3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */,
 				3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */,
+				3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */,
 				3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */,
+				3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
+				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
 				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
