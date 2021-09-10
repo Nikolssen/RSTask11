@@ -13,7 +13,7 @@ class Coordinator {
     let window: UIWindow
     
     func start() {
-        let tabBarController = TabBarController()
+        self.window.rootViewController = tabBarController
     }
     
     init(window: UIWindow){
@@ -22,22 +22,35 @@ class Coordinator {
     
     var tabBarController: TabBarController {
         let tabBarController = TabBarController()
-        tabBarController.setViewControllers([rocketListViewController, launchListViewController, ], animated: false)
+        tabBarController.setViewControllers([rocketListNavigationController, launchListNavigationController, launchpadListNavigationController], animated: false)
         return tabBarController
     }
     
-    var rocketListViewController: RocketListViewController {
+    var rocketListNavigationController: UINavigationController {
+        
         let rocketListViewController = RocketListViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        return rocketListViewController
+        let navigationController = UINavigationController(rootViewController: rocketListViewController)
+        navigationController.tabBarItem.image = .rocket
+        navigationController.tabBarItem.selectedImage = .rocket
+        navigationController.tabBarItem.title = Strings.TabBar.rocket
+        return navigationController
     }
     
-    var launchListViewController: LaunchListViewController {
+    var launchListNavigationController: UINavigationController {
         let launchListViewController = LaunchListViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        return launchListViewController
+        let navigationController = UINavigationController(rootViewController: launchListViewController)
+        navigationController.tabBarItem.image = .adjustment
+        navigationController.tabBarItem.selectedImage = .adjustment
+        navigationController.tabBarItem.title = Strings.TabBar.launch
+        return navigationController
     }
     
-    var launchpadListViewController: LaunchpadListViewController {
+    var launchpadListNavigationController: UINavigationController {
         let launchpadListViewController = LaunchpadListViewController(collectionViewLayout: UICollectionViewLayout())
-        return launchpadListViewController
+        let navigationController = UINavigationController(rootViewController: launchpadListViewController)
+        navigationController.tabBarItem.image = .lego
+        navigationController.tabBarItem.selectedImage = .lego
+        navigationController.tabBarItem.title = Strings.TabBar.launchpad
+        return navigationController
     }
 }
