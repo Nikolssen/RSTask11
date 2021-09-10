@@ -11,6 +11,7 @@ import UIKit
 class Coordinator {
     
     let window: UIWindow
+    let service: ServiceType = Service()
     
     func start() {
         self.window.rootViewController = tabBarController
@@ -46,7 +47,10 @@ class Coordinator {
     }
     
     var launchpadListNavigationController: UINavigationController {
-        let launchpadListViewController = LaunchpadListViewController(collectionViewLayout: UICollectionViewLayout())
+        let launchpadListViewController = LaunchpadListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let launchpadListPresenter = LaunchpadListPresenter(service: service, coordinator: self)
+        launchpadListPresenter.delegate = launchpadListViewController
+        launchpadListViewController.presenter = launchpadListPresenter
         let navigationController = UINavigationController(rootViewController: launchpadListViewController)
         navigationController.tabBarItem.image = .lego
         navigationController.tabBarItem.selectedImage = .lego

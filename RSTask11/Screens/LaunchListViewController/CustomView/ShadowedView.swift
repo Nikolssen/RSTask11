@@ -8,10 +8,33 @@
 import UIKit
 
 class ShadowedView: UIView {
-
+    
+    enum Constants {
+        static let horizontalOffset: CGFloat = 10.0
+        static let verticalOffset: CGFloat = 5.0
+    }
+    
+    enum Style {
+        case number(String)
+        case retired
+        case active
+    }
+    
     private let label: UILabel = UILabel()
     private let contentView: UIView = UIView()
     
+    var style: ShadowedView.Style = .active {
+        willSet{
+            switch newValue {
+            case .active:
+                label.text = "Active"
+            case .retired:
+                label.text = "Retired"
+            case .number(let number):
+                label.text = "#" + number
+            }
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,10 +45,7 @@ class ShadowedView: UIView {
         commonInit()
     }
     
-    enum Constants {
-        static let horizontalOffset: CGFloat = 10.0
-        static let verticalOffset: CGFloat = 5.0
-    }
+
     
     func commonInit(){
         contentView.addSubview(label)
@@ -33,7 +53,6 @@ class ShadowedView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .cyanProcess
-        label.text = "#133"
         label.font = .robotoMedium17
         
         NSLayoutConstraint.activate([
@@ -42,7 +61,8 @@ class ShadowedView: UIView {
             contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
             contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.horizontalOffset),
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalOffset)
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalOffset),
+            widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 1.0, constant: Constants.horizontalOffset * 2)
         ])
         backgroundColor = .clear
         layer.shadowColor = UIColor(red: 0.682, green: 0.682, blue: 0.753, alpha: 0.4).cgColor

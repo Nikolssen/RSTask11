@@ -26,6 +26,9 @@
 		3F7F60EF26EB3DD800BB537E /* Launchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60EE26EB3DD800BB537E /* Launchpad.swift */; };
 		3F7F60F126EB4C1C00BB537E /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60F026EB4C1C00BB537E /* Launch.swift */; };
 		3F7F60F326EB509500BB537E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60F226EB509500BB537E /* Strings.swift */; };
+		3F7F60F626EB8AED00BB537E /* LaunchpadListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60F526EB8AED00BB537E /* LaunchpadListPresenter.swift */; };
+		3F7F60F826EB8DDD00BB537E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60F726EB8DDD00BB537E /* Service.swift */; };
+		3F7F60FA26EB90B900BB537E /* LaunchpadCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60F926EB90B900BB537E /* LaunchpadCellPresenter.swift */; };
 		3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D97126E883D500ECB3D8 /* AppDelegate.swift */; };
 		3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97A26E883D600ECB3D8 /* Assets.xcassets */; };
 		3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */; };
@@ -33,6 +36,7 @@
 		3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */; };
 		3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */; };
 		3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */; };
+		3FB6612526EB972D00661134 /* Coordinator + LaunchpadListPresenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6612426EB972D00661134 /* Coordinator + LaunchpadListPresenterCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,9 @@
 		3F7F60EE26EB3DD800BB537E /* Launchpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpad.swift; sourceTree = "<group>"; };
 		3F7F60F026EB4C1C00BB537E /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		3F7F60F226EB509500BB537E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		3F7F60F526EB8AED00BB537E /* LaunchpadListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListPresenter.swift; sourceTree = "<group>"; };
+		3F7F60F726EB8DDD00BB537E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		3F7F60F926EB90B900BB537E /* LaunchpadCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadCellPresenter.swift; sourceTree = "<group>"; };
 		3F95D96E26E883D500ECB3D8 /* RSTask11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95D97126E883D500ECB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95D97A26E883D600ECB3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3FB6612426EB972D00661134 /* Coordinator + LaunchpadListPresenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator + LaunchpadListPresenterCoordinator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,12 +142,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		3F7F60E026EB325400BB537E /* Networking */ = {
+		3F7F60E026EB325400BB537E /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				3F7F60E126EB327700BB537E /* NetworkService.swift */,
+				3F7F60F726EB8DDD00BB537E /* Service.swift */,
 			);
-			path = Networking;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3F7F60E526EB350400BB537E /* LaunchpadListViewController */ = {
@@ -169,6 +178,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3F7F60F426EB8ABB00BB537E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F60F526EB8AED00BB537E /* LaunchpadListPresenter.swift */,
+				3F7F60F926EB90B900BB537E /* LaunchpadCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		3F95D96526E883D500ECB3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +206,10 @@
 		3F95D97026E883D500ECB3D8 /* RSTask11 */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6612326EB970400661134 /* Coordinator */,
+				3F7F60F426EB8ABB00BB537E /* Presenter */,
 				3F7F60ED26EB3D5700BB537E /* Model */,
-				3F7F60E026EB325400BB537E /* Networking */,
+				3F7F60E026EB325400BB537E /* Service */,
 				3F95D98D26E8A09600ECB3D8 /* Screens */,
 				3F95D98526E8867C00ECB3D8 /* Resourses */,
 				3F95D97126E883D500ECB3D8 /* AppDelegate.swift */,
@@ -226,9 +246,17 @@
 				3F6E905426EA3BA900A9FA49 /* LaunchListViewController */,
 				3F6E904D26E9EE0300A9FA49 /* RocketListViewController */,
 				3F6E904A26E9E62800A9FA49 /* TabBarController */,
-				3F7F60DE26EB31A000BB537E /* Coordinator.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		3FB6612326EB970400661134 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F60DE26EB31A000BB537E /* Coordinator.swift */,
+				3FB6612426EB972D00661134 /* Coordinator + LaunchpadListPresenterCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +340,10 @@
 				3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */,
 				3F7F60F326EB509500BB537E /* Strings.swift in Sources */,
 				3F7F60EF26EB3DD800BB537E /* Launchpad.swift in Sources */,
+				3F7F60FA26EB90B900BB537E /* LaunchpadCellPresenter.swift in Sources */,
+				3F7F60F626EB8AED00BB537E /* LaunchpadListPresenter.swift in Sources */,
+				3FB6612526EB972D00661134 /* Coordinator + LaunchpadListPresenterCoordinator.swift in Sources */,
+				3F7F60F826EB8DDD00BB537E /* Service.swift in Sources */,
 				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
 				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,

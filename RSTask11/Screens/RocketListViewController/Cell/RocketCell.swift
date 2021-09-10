@@ -20,11 +20,6 @@ class RocketCell: UICollectionViewCell {
         super.awakeFromNib()
         commonInit()
     }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
     
     func commonInit(){
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor

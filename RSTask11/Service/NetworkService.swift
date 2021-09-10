@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol Service {
-    
+protocol NetworkServiceType {
+    func get<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void)
 }
 
-class NetworkService: Service{
+class NetworkService: NetworkServiceType{
     lazy private var jsonDecoder = JSONDecoder()
 
-    func genericRequest<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void) {
+    func get<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void) {
         
         guard let url = buildURL(request: .launchpads) else {
             callback(.failure(NSError(domain: "", code: 2002, userInfo: [:])))

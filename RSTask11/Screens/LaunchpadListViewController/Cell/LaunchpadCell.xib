@@ -27,23 +27,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoG-67-kqP">
-                        <rect key="frame" x="20" y="64" width="59" height="29"/>
+                        <rect key="frame" x="20" y="64" width="59" height="28"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvj-Yj-OTQ">
-                        <rect key="frame" x="20" y="98" width="42" height="20"/>
+                        <rect key="frame" x="20" y="97" width="42" height="20"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-hJ-bcJ" customClass="ShadowedView" customModule="RSTask11" customModuleProvider="target">
-                        <rect key="frame" x="20" y="128" width="72" height="32"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-hJ-bcJ" customClass="ShadowedView" customModule="RSTask11" customModuleProvider="target">
+                        <rect key="frame" x="20" y="127" width="72" height="32"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="AVn-5R-04k"/>
-                            <constraint firstAttribute="width" constant="72" id="zGz-YH-ibO"/>
                         </constraints>
                     </view>
                 </subviews>
