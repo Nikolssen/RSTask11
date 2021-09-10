@@ -1,5 +1,5 @@
 //
-//  NumberView.swift
+//  ShadowedView.swift
 //  RSTask11
 //
 //  Created by Ivan Budovich on 9/9/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NumberView: UIView {
+class ShadowedView: UIView {
 
     private let label: UILabel = UILabel()
     private let contentView: UIView = UIView()

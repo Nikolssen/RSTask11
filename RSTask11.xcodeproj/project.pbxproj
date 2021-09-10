@@ -14,9 +14,15 @@
 		3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905526EA3BD200A9FA49 /* LaunchCell.swift */; };
 		3F6E905826EA3BD200A9FA49 /* LaunchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E905626EA3BD200A9FA49 /* LaunchCell.xib */; };
 		3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */; };
-		3F6E906026EA4A6A00A9FA49 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */; };
+		3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905F26EA4A6A00A9FA49 /* ShadowedView.swift */; };
 		3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */; };
 		3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */; };
+		3F7F60DF26EB31A000BB537E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60DE26EB31A000BB537E /* Coordinator.swift */; };
+		3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E126EB327700BB537E /* NetworkService.swift */; };
+		3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E326EB32F600BB537E /* LaunchListViewController.swift */; };
+		3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E626EB352600BB537E /* LaunchpadListViewController.swift */; };
+		3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E826EB395500BB537E /* LaunchpadCell.swift */; };
+		3F7F60EB26EB395500BB537E /* LaunchpadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7F60E926EB395500BB537E /* LaunchpadCell.xib */; };
 		3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D97126E883D500ECB3D8 /* AppDelegate.swift */; };
 		3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97A26E883D600ECB3D8 /* Assets.xcassets */; };
 		3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */; };
@@ -34,9 +40,15 @@
 		3F6E905526EA3BD200A9FA49 /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
 		3F6E905626EA3BD200A9FA49 /* LaunchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchCell.xib; sourceTree = "<group>"; };
 		3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
-		3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		3F6E905F26EA4A6A00A9FA49 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
 		3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedButton.swift; sourceTree = "<group>"; };
+		3F7F60DE26EB31A000BB537E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3F7F60E126EB327700BB537E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3F7F60E326EB32F600BB537E /* LaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
+		3F7F60E626EB352600BB537E /* LaunchpadListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadListViewController.swift; sourceTree = "<group>"; };
+		3F7F60E826EB395500BB537E /* LaunchpadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadCell.swift; sourceTree = "<group>"; };
+		3F7F60E926EB395500BB537E /* LaunchpadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchpadCell.xib; sourceTree = "<group>"; };
 		3F95D96E26E883D500ECB3D8 /* RSTask11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F95D97126E883D500ECB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F95D97A26E883D600ECB3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,21 +89,22 @@
 			path = RocketListViewController;
 			sourceTree = "<group>";
 		};
-		3F6E905426EA3BA900A9FA49 /* LaunchesListViewController */ = {
+		3F6E905426EA3BA900A9FA49 /* LaunchListViewController */ = {
 			isa = PBXGroup;
 			children = (
 				3F6E906126EA4B9C00A9FA49 /* CustomView */,
 				3F6E906326EA4BC300A9FA49 /* Cell */,
 				3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */,
+				3F7F60E326EB32F600BB537E /* LaunchListViewController.swift */,
 			);
-			path = LaunchesListViewController;
+			path = LaunchListViewController;
 			sourceTree = "<group>";
 		};
 		3F6E906126EA4B9C00A9FA49 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 				3F6E905926EA3C4300A9FA49 /* IndicatorView.swift */,
-				3F6E905F26EA4A6A00A9FA49 /* NumberView.swift */,
+				3F6E905F26EA4A6A00A9FA49 /* ShadowedView.swift */,
 				3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */,
 			);
 			path = CustomView;
@@ -115,6 +128,32 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3F7F60E026EB325400BB537E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F60E126EB327700BB537E /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3F7F60E526EB350400BB537E /* LaunchpadListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F60EC26EB3C0700BB537E /* Cell */,
+				3F7F60E626EB352600BB537E /* LaunchpadListViewController.swift */,
+			);
+			path = LaunchpadListViewController;
+			sourceTree = "<group>";
+		};
+		3F7F60EC26EB3C0700BB537E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F7F60E826EB395500BB537E /* LaunchpadCell.swift */,
+				3F7F60E926EB395500BB537E /* LaunchpadCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3F95D96526E883D500ECB3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +173,7 @@
 		3F95D97026E883D500ECB3D8 /* RSTask11 */ = {
 			isa = PBXGroup;
 			children = (
+				3F7F60E026EB325400BB537E /* Networking */,
 				3F95D98D26E8A09600ECB3D8 /* Screens */,
 				3F95D98526E8867C00ECB3D8 /* Resourses */,
 				3F95D97126E883D500ECB3D8 /* AppDelegate.swift */,
@@ -165,9 +205,11 @@
 		3F95D98D26E8A09600ECB3D8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3F6E905426EA3BA900A9FA49 /* LaunchesListViewController */,
+				3F7F60E526EB350400BB537E /* LaunchpadListViewController */,
+				3F6E905426EA3BA900A9FA49 /* LaunchListViewController */,
 				3F6E904D26E9EE0300A9FA49 /* RocketListViewController */,
 				3F6E904A26E9E62800A9FA49 /* TabBarController */,
+				3F7F60DE26EB31A000BB537E /* Coordinator.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -235,6 +277,7 @@
 				3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */,
 				3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */,
 				3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */,
+				3F7F60EB26EB395500BB537E /* LaunchpadCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,14 +290,19 @@
 			files = (
 				3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */,
 				3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */,
+				3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
-				3F6E906026EA4A6A00A9FA49 /* NumberView.swift in Sources */,
+				3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */,
 				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
 				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
 				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
+				3F7F60DF26EB31A000BB537E /* Coordinator.swift in Sources */,
 				3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */,
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
+				3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */,
+				3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */,
+				3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -87,5 +87,7 @@ extension UIFont {
         return UIFont(name: "Roboto-Medium", size: 17)!
     }
     
-    
+    static var robotoMedium10: UIFont {
+        return UIFont(name: "Roboto-Medium", size: 10)!
+    }
 }

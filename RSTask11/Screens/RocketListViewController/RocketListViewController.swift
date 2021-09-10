@@ -8,7 +8,7 @@
 import UIKit
 
 
-class RocketListViewController: UICollectionViewController {
+final class RocketListViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
