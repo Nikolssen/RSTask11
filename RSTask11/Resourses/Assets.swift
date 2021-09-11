@@ -71,6 +71,19 @@ extension UIImage {
     static var defaultImage: UIImage {
         return UIImage(named: "defaultImage")!
     }
+    static var safari: UIImage {
+        return UIImage(named: "safari")!
+    }
+    
+    static var clock: UIImage {
+        return UIImage(named: "clock")!
+    }
+    static var cross: UIImage {
+        return UIImage(named: "cross")!
+    }
+    static var share: UIImage {
+        return UIImage(named: "share")!
+    }
 }
 
 extension UIFont {
@@ -89,6 +102,10 @@ extension UIFont {
     
     static var robotoMedium17: UIFont {
         return UIFont(name: "Roboto-Medium", size: 17)!
+    }
+    
+    static var robotoMedium13: UIFont {
+        return UIFont(name: "Roboto-Medium", size: 13)!
     }
     
     static var robotoMedium10: UIFont {

@@ -21,7 +21,9 @@ struct RocketCellViewData {
         guard let imageURL = imageURL else {return}
         imageCacher.loadImage(urlString: imageURL){
             image in
-            imageView.image = image
+            UIView.transition(with: imageView, duration: 0.4, options: .curveEaseInOut, animations: {
+                imageView.image = image
+            }, completion: nil)
         }
     }
 }

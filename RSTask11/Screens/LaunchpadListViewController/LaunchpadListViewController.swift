@@ -16,7 +16,7 @@ final class LaunchpadListViewController: UICollectionViewController {
         view.backgroundColor = .queenBlue
         collectionView.backgroundColor = .queenBlue
         self.collectionView.register(UINib(nibName: "LaunchpadCell", bundle: nil), forCellWithReuseIdentifier: LaunchpadCell.Constants.reuseIdentifier)
-
+        configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +26,26 @@ final class LaunchpadListViewController: UICollectionViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView.reloadData()
+    }
+    
+    func configureNavigationBar(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: .bidirectionalArrow, style: .plain, target: self, action: #selector(showSortOptions))
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.setTitleTextAttributes([.font: UIFont.robotoMedium13, .foregroundColor: UIColor.smockyBlack], for: .normal)
+        segmentedControl.backgroundColor = .glaucous
+        segmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
+        segmentedControl.insertSegment(withTitle: "Active", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "Retired", at: 2, animated: false)
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(filter(sender:)), for: .valueChanged)
+        self.navigationItem.titleView = segmentedControl
+    }
+    @objc func showSortOptions(){
+        
+    }
+    
+    @objc func filter(sender: UISegmentedControl){
+        
     }
     // MARK: UICollectionViewDataSource
 
@@ -65,7 +85,7 @@ extension LaunchpadListViewController: UICollectionViewDelegateFlowLayout{
         let height = width / LaunchpadCell.Constants.widthToHeightRatio
         return CGSize(width: width, height: height)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         Constants.interspacing
     }
 }

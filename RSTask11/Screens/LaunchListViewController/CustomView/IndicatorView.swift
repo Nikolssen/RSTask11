@@ -9,6 +9,23 @@ import UIKit
 
 class IndicatorView: UIView {
 
+    enum Style {
+        case clock
+        case checkmark
+    }
+    
+    var style: Style = .clock {
+        willSet {
+            if newValue == .checkmark{
+                imageView.image = .checkmark
+            }
+            else {
+                imageView.image = .clock
+            }
+            
+        }
+    }
+    
     private let imageView: UIImageView = UIImageView()
     private let contentView: UIView = UIView()
 

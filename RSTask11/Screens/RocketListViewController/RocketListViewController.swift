@@ -66,7 +66,7 @@ extension RocketListViewController: UICollectionViewDelegateFlowLayout{
         let height = width / RocketCell.Constants.widthToHeightRatio
         return CGSize(width: width, height: height)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         Constants.interspacing
     }
 }

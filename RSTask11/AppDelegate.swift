@@ -43,5 +43,6 @@ extension AppDelegate {
         let barButtonItemAppearence = UIBarButtonItem.appearance()
         barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.robotoMedium17, .foregroundColor: UIColor.champagne], for: .normal)
         barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.robotoMedium17, .foregroundColor: UIColor.coral], for: .highlighted)
+        barButtonItemAppearence.tintColor = .coral
     }
 }
