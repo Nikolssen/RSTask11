@@ -11,3 +11,9 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
         
     }
 }
+
+extension Coordinator: RocketListPresenterCoordinator{
+    func showDetails(model: Rocket) {
+        
+    }
+}

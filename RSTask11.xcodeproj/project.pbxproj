@@ -40,6 +40,9 @@
 		84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E7D26EBDBC6007BEDA9 /* Rocket.swift */; };
 		84212E8326EBE956007BEDA9 /* LaunchCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */; };
 		84212E8626EBE969007BEDA9 /* RocketCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */; };
+		84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */; };
+		84C8DF6C26EC934A003E3D8B /* LaunchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */; };
+		84C8DF6F26ECD6F2003E3D8B /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6E26ECD6F2003E3D8B /* ImageCacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		84212E7D26EBDBC6007BEDA9 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellViewData.swift; sourceTree = "<group>"; };
 		84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCellViewData.swift; sourceTree = "<group>"; };
+		84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListPresenter.swift; sourceTree = "<group>"; };
+		84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListPresenter.swift; sourceTree = "<group>"; };
+		84C8DF6E26ECD6F2003E3D8B /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 			children = (
 				3F7F60E126EB327700BB537E /* NetworkService.swift */,
 				3F7F60F726EB8DDD00BB537E /* Service.swift */,
+				84C8DF6E26ECD6F2003E3D8B /* ImageCacher.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				3F7F60F526EB8AED00BB537E /* LaunchpadListPresenter.swift */,
+				84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */,
+				84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -365,6 +374,7 @@
 				3F7F60F826EB8DDD00BB537E /* Service.swift in Sources */,
 				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
 				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
+				84C8DF6C26EC934A003E3D8B /* LaunchListPresenter.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
 				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
 				84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */,
@@ -372,9 +382,11 @@
 				3F7F60DF26EB31A000BB537E /* Coordinator.swift in Sources */,
 				3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */,
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
+				84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */,
 				3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */,
 				3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */,
 				3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */,
+				84C8DF6F26ECD6F2003E3D8B /* ImageCacher.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

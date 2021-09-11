@@ -16,7 +16,7 @@ class NetworkService: NetworkServiceType{
 
     func get<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void) {
         
-        guard let url = buildURL(request: .launchpads) else {
+        guard let url = buildURL(request: request) else {
             callback(.failure(NSError(domain: "", code: 2002, userInfo: [:])))
             return
         }

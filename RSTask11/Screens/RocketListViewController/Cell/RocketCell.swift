@@ -29,7 +29,11 @@ class RocketCell: UICollectionViewCell {
     }
     
     func configure(with viewData: RocketCellViewData) {
-        
+        titleLabel.text = viewData.name
+        firstLaunchLabel.text = viewData.firstLaunch
+        launchCostLabel.text = viewData.cost
+        successRateLabel.text = viewData.success
+        viewData.loadImage(for: imageView)
     }
     
     override func prepareForReuse() {

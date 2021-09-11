@@ -67,6 +67,10 @@ extension UIImage {
     static var hyperlink: UIImage {
         return UIImage(named: "hyperlink")!
     }
+    
+    static var defaultImage: UIImage {
+        return UIImage(named: "defaultImage")!
+    }
 }
 
 extension UIFont {

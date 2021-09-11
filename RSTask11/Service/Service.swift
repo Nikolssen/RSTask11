@@ -9,8 +9,10 @@ import Foundation
 
 class Service: ServiceType {
     let networkService: NetworkServiceType = NetworkService()
+    let imageCacher: ImageCacherType = ImageCacher()
 }
 
 protocol ServiceType {
     var networkService: NetworkServiceType {get}
+    var imageCacher: ImageCacherType {get}
 }

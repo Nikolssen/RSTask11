@@ -16,8 +16,10 @@ class LaunchCell: UICollectionViewCell {
     @IBOutlet var shadowedImageView: ShadowedImageView!
     
     enum Constants{
-        
+        static let widthToHeightRatio: CGFloat = 377.0 / 145.0
+        static let reuseIdentifier: String = "LaunchCellID"
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor

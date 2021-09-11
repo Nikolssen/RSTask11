@@ -30,6 +30,9 @@ class Coordinator {
     var rocketListNavigationController: UINavigationController {
         
         let rocketListViewController = RocketListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let rocketListPresenter = RocketListPresenter(service: service, coordinator: self)
+        rocketListPresenter.delegate = rocketListViewController
+        rocketListViewController.presenter = rocketListPresenter
         let navigationController = UINavigationController(rootViewController: rocketListViewController)
         navigationController.tabBarItem.image = .rocket
         navigationController.tabBarItem.selectedImage = .rocket
