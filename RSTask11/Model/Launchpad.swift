@@ -28,12 +28,9 @@ struct Launchpad {
 
 extension Launchpad: Decodable {
     
-    struct Images: Decodable {
-        enum CodingKeys: String, CodingKey {
+    enum ImagesCodingKeys: String, CodingKey {
             case large
         }
-        let large: [String]
-    }
     
     enum CodingKeys: String, CodingKey {
         case images, name, full_name,
@@ -46,8 +43,8 @@ extension Launchpad: Decodable {
     init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        let images = try container.decode(Images.self, forKey: .images)
+        let imagesContainer = try container.nestedContainer(keyedBy: ImagesCodingKeys.self, forKey: .images)
+        let images = try imagesContainer.decode([String].self, forKey: .large)
         
         let name = try container.decode(String.self, forKey: .name)
         let fullName = try container.decode(String.self, forKey: .full_name)
@@ -61,6 +58,6 @@ extension Launchpad: Decodable {
         let status = try container.decode(String.self, forKey: .status)
         let details = try container.decode(String.self, forKey: .details)
         let id = try container.decode(String.self, forKey: .id)
-        self.init(images: images.large, name: name, fullName: fullName, region: region, latitude: latitude, longitude: longitude, launchAttempts: launchAttempts, launchSuccesses: launchSuccesses, rockets: rockets, launches: launches, status: status, details: details, id: id)
+        self.init(images: images, name: name, fullName: fullName, region: region, latitude: latitude, longitude: longitude, launchAttempts: launchAttempts, launchSuccesses: launchSuccesses, rockets: rockets, launches: launches, status: status, details: details, id: id)
     }
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,28 +27,100 @@
                         <rect key="frame" x="0.0" y="44" width="385" height="232.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-Ih-70I">
-                        <rect key="frame" x="20" y="286.5" width="66" height="25"/>
-                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                        <rect key="frame" x="20" y="286.5" width="76.5" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eq2-ww-hKt">
+                        <rect key="frame" x="20" y="314" width="345" height="33"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-EB-YHc">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Launch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV8-LD-hvD">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-xN-7NA">
+                                        <rect key="frame" x="0.0" y="16.5" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="Slate Gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-eE-p2I">
+                                <rect key="frame" x="115" y="0.0" width="115" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launch cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq6-0c-kSU">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQb-yD-4ak">
+                                        <rect key="frame" x="0.0" y="16.5" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="Slate Gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uUk-h9-TU3">
+                                <rect key="frame" x="230" y="0.0" width="115" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTL-eW-a0O">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9St-aW-NMF">
+                                        <rect key="frame" x="0.0" y="16.5" width="115" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="Slate Gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="Super White"/>
             <constraints>
+                <constraint firstItem="Eq2-ww-hKt" firstAttribute="top" secondItem="Ypv-Ih-70I" secondAttribute="bottom" constant="5" id="0lz-rA-5i6"/>
                 <constraint firstItem="Ypv-Ih-70I" firstAttribute="top" secondItem="EoU-6F-azu" secondAttribute="bottom" constant="10" id="6US-gC-E7C"/>
+                <constraint firstItem="Eq2-ww-hKt" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="9Y7-fU-ufj"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="Eq2-ww-hKt" secondAttribute="bottom" id="D5p-GU-oDl"/>
                 <constraint firstItem="EoU-6F-azu" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="HuY-YJ-G8c"/>
                 <constraint firstItem="EoU-6F-azu" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.67" id="aZw-8a-9Lc"/>
                 <constraint firstItem="Ypv-Ih-70I" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="eC9-iN-vSX"/>
                 <constraint firstItem="EoU-6F-azu" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="fT0-Tj-UhI"/>
                 <constraint firstItem="EoU-6F-azu" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="jvm-NO-HUj"/>
+                <constraint firstItem="Eq2-ww-hKt" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="oa5-1X-Ynb"/>
             </constraints>
             <size key="customSize" width="385" height="347"/>
             <connections>
+                <outlet property="firstLaunchLabel" destination="VTD-xN-7NA" id="436-1J-Xoq"/>
                 <outlet property="imageView" destination="EoU-6F-azu" id="zd5-pw-9SF"/>
+                <outlet property="launchCostLabel" destination="zQb-yD-4ak" id="I10-5O-eyA"/>
+                <outlet property="successRateLabel" destination="9St-aW-NMF" id="oa8-gh-d9W"/>
                 <outlet property="titleLabel" destination="Ypv-Ih-70I" id="4Zd-ki-ydv"/>
             </connections>
             <point key="canvasLocation" x="367.39130434782612" y="197.87946428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="Slate Gray">
+            <color red="0.41999998688697815" green="0.44499999284744263" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Super White">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

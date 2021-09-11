@@ -15,7 +15,7 @@ protocol LaunchpadListPresenterType {
     var service: ServiceType {get}
     
     func viewWillBecomeActive()
-    func viewDataForCell(at index: Int) -> LaunchpadCellPresenter
+    func viewDataForCell(at index: Int) -> LaunchpadCellViewData
     func showDetailsForCell(at index: Int)
     func numberOfCells() -> Int
 }
@@ -56,9 +56,9 @@ class LaunchpadListPresenter: LaunchpadListPresenterType {
         }
     }
     
-    func viewDataForCell(at index: Int) -> LaunchpadCellPresenter {
+    func viewDataForCell(at index: Int) -> LaunchpadCellViewData {
         let launchpad = launchpads[index]
-        return LaunchpadCellPresenter(name: launchpad.name, location: launchpad.region, status: launchpad.status)
+        return LaunchpadCellViewData(name: launchpad.name, location: launchpad.region, status: launchpad.status)
     }
     
     func showDetailsForCell(at index: Int) {

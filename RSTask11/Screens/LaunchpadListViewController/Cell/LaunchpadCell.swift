@@ -22,15 +22,15 @@ class LaunchpadCell: UICollectionViewCell {
         super.awakeFromNib()
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        layer.shadowRadius = 6.0
+        layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.cornerRadius = 15.0
     }
 
-    func configure(with presenter: LaunchpadCellPresenter){
-        nameLabel.text = presenter.name
-        locationLabel.text = presenter.location
-        shadowedView.style = presenter.status == "retired" ? .retired : .active
+    func configure(with viewData: LaunchpadCellViewData){
+        nameLabel.text = viewData.name
+        locationLabel.text = viewData.location
+        shadowedView.style = viewData.status == "retired" ? .retired : .active
     }
     
     override func prepareForReuse() {

@@ -11,6 +11,9 @@ class RocketCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var firstLaunchLabel: UILabel!
+    @IBOutlet var launchCostLabel: UILabel!
+    @IBOutlet var successRateLabel: UILabel!
     
     enum Constants {
         static let widthToHeightRatio: CGFloat = 377.0 / 360
@@ -18,14 +21,19 @@ class RocketCell: UICollectionViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        commonInit()
-    }
-    
-    func commonInit(){
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        layer.shadowRadius = 6.0
+        layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.cornerRadius = 15.0
     }
+    
+    func configure(with viewData: RocketCellViewData) {
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
 }
