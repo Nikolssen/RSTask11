@@ -30,7 +30,11 @@ class LaunchCell: UICollectionViewCell {
     }
     
     func configure(with viewData: LaunchCellViewData) {
-        
+        titleLabel.text = viewData.name
+        dateLabel.text = viewData.date
+        indicatorView.style = viewData.isPlanned ? .clock : .checkmark
+        shadowedView.style = .number(viewData.number)
+        viewData.loadImage(for: shadowedImageView.imageView)
     }
     
     override func prepareForReuse() {

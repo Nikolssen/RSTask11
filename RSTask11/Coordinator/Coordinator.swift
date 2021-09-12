@@ -43,6 +43,9 @@ class Coordinator {
     var launchListNavigationController: UINavigationController {
         let launchListViewController = LaunchListViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let navigationController = UINavigationController(rootViewController: launchListViewController)
+        let launchListPresenter = LaunchListPresenter(service: service, coordinator: self)
+        launchListPresenter.delegate = launchListViewController
+        launchListViewController.presenter = launchListPresenter
         navigationController.tabBarItem.image = .adjustment
         navigationController.tabBarItem.selectedImage = .adjustment
         navigationController.tabBarItem.title = Strings.TabBar.launch

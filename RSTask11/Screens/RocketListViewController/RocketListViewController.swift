@@ -17,7 +17,7 @@ final class RocketListViewController: UICollectionViewController {
         view.backgroundColor = .queenBlue
         collectionView.backgroundColor = .queenBlue
         self.collectionView.register(UINib(nibName: "RocketCell", bundle: nil), forCellWithReuseIdentifier: RocketCell.Constants.reuseIdentifier)
-
+        configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +44,13 @@ final class RocketListViewController: UICollectionViewController {
         cell.configure(with: presenter.viewDataForCell(at: indexPath.item))
     
         return cell
+    }
+    func configureNavigationBar(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: .bidirectionalArrow, style: .plain, target: self, action: #selector(showSortOptions))
+    }
+    
+    @objc func showSortOptions(){
+        
     }
 }
 

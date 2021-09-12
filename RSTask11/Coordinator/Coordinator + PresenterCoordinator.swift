@@ -1,5 +1,5 @@
 //
-//  Coordinator + LaunchpadListPresenterCoordinator.swift
+//  Coordinator + PresenterCoordinator.swift
 //  RSTask11
 //
 //  Created by Ivan Budovich on 9/10/21.
@@ -14,6 +14,12 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
 
 extension Coordinator: RocketListPresenterCoordinator{
     func showDetails(model: Rocket) {
+        
+    }
+}
+
+extension Coordinator: LaunchListPresenterCoordinator{
+    func showDetails(model: Launch) {
         
     }
 }

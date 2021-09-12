@@ -9,7 +9,7 @@ import UIKit
 
 class ShadowedImageView: UIView {
 
-    private let imageView: UIImageView = UIImageView()
+    let imageView: UIImageView = UIImageView()
     private let contentView: UIView = UIView()
 
     
@@ -34,7 +34,7 @@ class ShadowedImageView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         imageView.tintColor = .cyanProcess
-        imageView.image = .checkmark
+        imageView.contentMode = .scaleAspectFill
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.topAnchor.constraint(equalTo: topAnchor),
@@ -67,7 +67,8 @@ class ShadowedImageView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = frame.height / 2
-        contentView.layer.cornerRadius = frame.height / 2
+        layer.cornerRadius = 20
+        contentView.layer.cornerRadius = 20
+        imageView.layer.cornerRadius = 20
     }
 }

@@ -27,14 +27,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-8n-ceS">
-                        <rect key="frame" x="34" y="26" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-8n-ceS">
+                        <rect key="frame" x="34" y="26" width="243" height="21"/>
                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-m0-IXd">
-                        <rect key="frame" x="20" y="57" width="42" height="20"/>
+                        <rect key="frame" x="20" y="97.5" width="42" height="20"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-XC-eTg" customClass="ShadowedImageView" customModule="RSTask11" customModuleProvider="target">
-                        <rect key="frame" x="254" y="26" width="101" height="101"/>
+                        <rect key="frame" x="290" y="62" width="65" height="65"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ARQ-XC-eTg" secondAttribute="height" multiplier="1:1" id="oiv-3b-VIa"/>
@@ -72,9 +72,10 @@
                 <constraint firstItem="PX9-8n-ceS" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="Mi1-XJ-gOc"/>
                 <constraint firstItem="y8b-cj-PWu" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="OqY-a8-hZf"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="y8b-cj-PWu" secondAttribute="bottom" constant="18" id="SMg-UA-yvu"/>
+                <constraint firstItem="ARQ-XC-eTg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PX9-8n-ceS" secondAttribute="trailing" constant="13" id="Xva-JF-OHG"/>
                 <constraint firstItem="QYR-m0-IXd" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="c53-ph-HlW"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="ARQ-XC-eTg" secondAttribute="top" constant="18" id="dQY-ZJ-IQV"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="PX9-8n-ceS" secondAttribute="top" constant="20" id="emZ-A1-xTP"/>
+                <constraint firstItem="ARQ-XC-eTg" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="18" id="dQY-ZJ-IQV"/>
+                <constraint firstItem="PX9-8n-ceS" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="20" id="emZ-A1-xTP"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="ARQ-XC-eTg" secondAttribute="bottom" constant="18" id="kYk-3c-E34"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="liG-eS-LPq" secondAttribute="bottom" constant="18" id="qrU-I3-abT"/>
             </constraints>
