@@ -69,6 +69,5 @@ class ShadowedImageView: UIView {
         super.layoutSubviews()
         layer.cornerRadius = 20
         contentView.layer.cornerRadius = 20
-        imageView.layer.cornerRadius = 20
     }
 }

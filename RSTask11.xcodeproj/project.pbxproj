@@ -43,6 +43,12 @@
 		84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */; };
 		84C8DF6C26EC934A003E3D8B /* LaunchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */; };
 		84C8DF6F26ECD6F2003E3D8B /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DF6E26ECD6F2003E3D8B /* ImageCacher.swift */; };
+		84E0562526EE2B2000330A50 /* LaunchpadDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0562326EE2B2000330A50 /* LaunchpadDetailsViewController.swift */; };
+		84E0562626EE2B2000330A50 /* LaunchpadDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E0562426EE2B2000330A50 /* LaunchpadDetailsViewController.xib */; };
+		84E0562A26EE2B3900330A50 /* LaunchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0562826EE2B3900330A50 /* LaunchDetailsViewController.swift */; };
+		84E0562B26EE2B3900330A50 /* LaunchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E0562926EE2B3900330A50 /* LaunchDetailsViewController.xib */; };
+		84E0562F26EE2B4A00330A50 /* RocketDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0562D26EE2B4A00330A50 /* RocketDetailsViewController.swift */; };
+		84E0563026EE2B4A00330A50 /* RocketDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E0562E26EE2B4A00330A50 /* RocketDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +90,12 @@
 		84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListPresenter.swift; sourceTree = "<group>"; };
 		84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListPresenter.swift; sourceTree = "<group>"; };
 		84C8DF6E26ECD6F2003E3D8B /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
+		84E0562326EE2B2000330A50 /* LaunchpadDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadDetailsViewController.swift; sourceTree = "<group>"; };
+		84E0562426EE2B2000330A50 /* LaunchpadDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchpadDetailsViewController.xib; sourceTree = "<group>"; };
+		84E0562826EE2B3900330A50 /* LaunchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewController.swift; sourceTree = "<group>"; };
+		84E0562926EE2B3900330A50 /* LaunchDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchDetailsViewController.xib; sourceTree = "<group>"; };
+		84E0562D26EE2B4A00330A50 /* RocketDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailsViewController.swift; sourceTree = "<group>"; };
+		84E0562E26EE2B4A00330A50 /* RocketDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +270,9 @@
 		3F95D98D26E8A09600ECB3D8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				84E0562226EE2A5700330A50 /* LaunchpadDetailsViewController */,
+				84E0562126EE2A4600330A50 /* LaunchDetailsViewController */,
+				84E0562026EE2A3300330A50 /* RocketDetailsViewController */,
 				3F7F60E526EB350400BB537E /* LaunchpadListViewController */,
 				3F6E905426EA3BA900A9FA49 /* LaunchListViewController */,
 				3F6E904D26E9EE0300A9FA49 /* RocketListViewController */,
@@ -283,6 +298,33 @@
 				84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */,
 			);
 			path = ViewData;
+			sourceTree = "<group>";
+		};
+		84E0562026EE2A3300330A50 /* RocketDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E0562D26EE2B4A00330A50 /* RocketDetailsViewController.swift */,
+				84E0562E26EE2B4A00330A50 /* RocketDetailsViewController.xib */,
+			);
+			path = RocketDetailsViewController;
+			sourceTree = "<group>";
+		};
+		84E0562126EE2A4600330A50 /* LaunchDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E0562826EE2B3900330A50 /* LaunchDetailsViewController.swift */,
+				84E0562926EE2B3900330A50 /* LaunchDetailsViewController.xib */,
+			);
+			path = LaunchDetailsViewController;
+			sourceTree = "<group>";
+		};
+		84E0562226EE2A5700330A50 /* LaunchpadDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E0562326EE2B2000330A50 /* LaunchpadDetailsViewController.swift */,
+				84E0562426EE2B2000330A50 /* LaunchpadDetailsViewController.xib */,
+			);
+			path = LaunchpadDetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +384,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0562626EE2B2000330A50 /* LaunchpadDetailsViewController.xib in Resources */,
 				3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */,
+				84E0562B26EE2B3900330A50 /* LaunchDetailsViewController.xib in Resources */,
+				84E0563026EE2B4A00330A50 /* RocketDetailsViewController.xib in Resources */,
 				3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */,
 				3F6E905826EA3BD200A9FA49 /* LaunchCell.xib in Resources */,
 				3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */,
@@ -361,6 +406,7 @@
 			files = (
 				3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */,
 				3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */,
+				84E0562A26EE2B3900330A50 /* LaunchDetailsViewController.swift in Sources */,
 				84212E8326EBE956007BEDA9 /* LaunchCellViewData.swift in Sources */,
 				3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
@@ -373,6 +419,7 @@
 				3FB6612526EB972D00661134 /* Coordinator + PresenterCoordinator.swift in Sources */,
 				3F7F60F826EB8DDD00BB537E /* Service.swift in Sources */,
 				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
+				84E0562526EE2B2000330A50 /* LaunchpadDetailsViewController.swift in Sources */,
 				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
 				84C8DF6C26EC934A003E3D8B /* LaunchListPresenter.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
@@ -384,6 +431,7 @@
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
 				84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */,
 				3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */,
+				84E0562F26EE2B4A00330A50 /* RocketDetailsViewController.swift in Sources */,
 				3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */,
 				3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */,
 				84C8DF6F26ECD6F2003E3D8B /* ImageCacher.swift in Sources */,
