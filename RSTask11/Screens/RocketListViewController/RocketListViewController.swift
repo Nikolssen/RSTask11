@@ -45,6 +45,10 @@ final class RocketListViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.showDetailsForCell(at: indexPath.item)
+    }
     func configureNavigationBar(){
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: .bidirectionalArrow, style: .plain, target: self, action: #selector(showSortOptions))
     }

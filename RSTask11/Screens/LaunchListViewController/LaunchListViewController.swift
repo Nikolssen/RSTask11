@@ -66,6 +66,9 @@ final class LaunchListViewController: UICollectionViewController {
     
         return cell
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.showDetailsForCell(at: indexPath.item)
+    }
 }
 
 extension LaunchListViewController{

@@ -64,6 +64,9 @@ final class LaunchpadListViewController: UICollectionViewController {
     
         return cell
     }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.showDetailsForCell(at: indexPath.item)
+    }
 }
 
 extension LaunchpadListViewController{
