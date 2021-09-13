@@ -17,6 +17,7 @@
 		3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905F26EA4A6A00A9FA49 /* ShadowedView.swift */; };
 		3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */; };
 		3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */; };
+		3F700E3926EF3194003B2EBB /* RocketDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F700E3826EF3194003B2EBB /* RocketDetailsPresenter.swift */; };
 		3F7F60DF26EB31A000BB537E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60DE26EB31A000BB537E /* Coordinator.swift */; };
 		3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E126EB327700BB537E /* NetworkService.swift */; };
 		3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F60E326EB32F600BB537E /* LaunchListViewController.swift */; };
@@ -37,6 +38,8 @@
 		3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */; };
 		3F95D98F26E8A0BD00ECB3D8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */; };
 		3FB6612526EB972D00661134 /* Coordinator + PresenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */; };
+		3FE2421226EF6E4E0013C76C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421026EF6E4E0013C76C /* ImageCell.swift */; };
+		3FE2421326EF6E4E0013C76C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2421126EF6E4E0013C76C /* ImageCell.xib */; };
 		84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E7D26EBDBC6007BEDA9 /* Rocket.swift */; };
 		84212E8326EBE956007BEDA9 /* LaunchCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */; };
 		84212E8626EBE969007BEDA9 /* RocketCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */; };
@@ -62,6 +65,7 @@
 		3F6E905F26EA4A6A00A9FA49 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		3F6E906426EA4C3000A9FA49 /* ShadowedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedImageView.swift; sourceTree = "<group>"; };
 		3F6E906626EA4CEE00A9FA49 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedButton.swift; sourceTree = "<group>"; };
+		3F700E3826EF3194003B2EBB /* RocketDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailsPresenter.swift; sourceTree = "<group>"; };
 		3F7F60DE26EB31A000BB537E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3F7F60E126EB327700BB537E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3F7F60E326EB32F600BB537E /* LaunchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3F95D98E26E8A0BD00ECB3D8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator + PresenterCoordinator.swift"; sourceTree = "<group>"; };
+		3FE2421026EF6E4E0013C76C /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		3FE2421126EF6E4E0013C76C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		84212E7D26EBDBC6007BEDA9 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellViewData.swift; sourceTree = "<group>"; };
 		84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCellViewData.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				3F7F60F526EB8AED00BB537E /* LaunchpadListPresenter.swift */,
 				84C8DF6826EC9307003E3D8B /* RocketListPresenter.swift */,
 				84C8DF6B26EC934A003E3D8B /* LaunchListPresenter.swift */,
+				3F700E3826EF3194003B2EBB /* RocketDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -290,6 +297,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		3FE2420F26EF62890013C76C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2421026EF6E4E0013C76C /* ImageCell.swift */,
+				3FE2421126EF6E4E0013C76C /* ImageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		84212E8026EBE89B007BEDA9 /* ViewData */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +319,7 @@
 		84E0562026EE2A3300330A50 /* RocketDetailsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3FE2420F26EF62890013C76C /* Cell */,
 				84E0562D26EE2B4A00330A50 /* RocketDetailsViewController.swift */,
 				84E0562E26EE2B4A00330A50 /* RocketDetailsViewController.xib */,
 			);
@@ -390,6 +407,7 @@
 				84E0563026EE2B4A00330A50 /* RocketDetailsViewController.xib in Resources */,
 				3F95D97E26E883D600ECB3D8 /* LaunchScreen.storyboard in Resources */,
 				3F6E905826EA3BD200A9FA49 /* LaunchCell.xib in Resources */,
+				3FE2421326EF6E4E0013C76C /* ImageCell.xib in Resources */,
 				3F95D97B26E883D600ECB3D8 /* Assets.xcassets in Resources */,
 				3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */,
 				3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */,
@@ -409,6 +427,7 @@
 				84E0562A26EE2B3900330A50 /* LaunchDetailsViewController.swift in Sources */,
 				84212E8326EBE956007BEDA9 /* LaunchCellViewData.swift in Sources */,
 				3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */,
+				3F700E3926EF3194003B2EBB /* RocketDetailsPresenter.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
 				3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */,
 				3F7F60F326EB509500BB537E /* Strings.swift in Sources */,
@@ -426,6 +445,7 @@
 				3F6E904C26E9E66F00A9FA49 /* TabBarController+Transitions.swift in Sources */,
 				84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */,
 				3F7F60F126EB4C1C00BB537E /* Launch.swift in Sources */,
+				3FE2421226EF6E4E0013C76C /* ImageCell.swift in Sources */,
 				3F7F60DF26EB31A000BB537E /* Coordinator.swift in Sources */,
 				3F6E905726EA3BD200A9FA49 /* LaunchCell.swift in Sources */,
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,

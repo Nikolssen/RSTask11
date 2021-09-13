@@ -7,28 +7,33 @@
 
 import UIKit
 
-class ShadowedButton: UIButton {
-    let layer1: CALayer = CALayer()
+class  ShadowedButton: UIButton {
     
-    override var buttonType: UIButton.ButtonType { return .custom }
-    
-    override var isHighlighted: Bool{
-        willSet{
-            if newValue {
-                layer1.shadowOpacity = 0.0
-                layer.shadowOpacity = 0.0
-            }
-            else {
-                layer1.shadowOpacity = 1.0
-                layer.shadowOpacity = 1.0
-            }
-        }
+    private var imageWidth: CGFloat {
+        self.imageView!.frame.width
     }
     
+    private var textWidth: CGFloat {
+        let attributes = [NSAttributedString.Key.font: UIFont.robotoMedium17]
+        return (titleLabel?.text as NSString?)!.size(withAttributes: attributes).width
+    }
     
+    private var leftRightMargin: CGFloat = 10
+    private var imageInset: CGFloat = 5
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    private lazy var whiteShadow: CALayer = {
+        let shadow1 = CALayer()
+        shadow1.shadowColor = UIColor.white.cgColor
+        shadow1.shadowOffset = CGSize(width: -2, height: -2)
+        shadow1.shadowOpacity = 1
+        shadow1.shadowRadius = 1.5
+        shadow1.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 16).cgPath
+        return shadow1
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
     
     override func awakeFromNib() {
@@ -36,39 +41,54 @@ class ShadowedButton: UIButton {
         commonInit()
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
-
+    
     func commonInit(){
-        backgroundColor = .superWhite
         setTitleColor(.coral, for: .normal)
         setTitleColor(.champagne, for: .highlighted)
         titleLabel?.font = .robotoMedium17
-        backgroundColor = .superWhite
+        tintColor = .coral
+        backgroundColor = .white
+        translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius =  16
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.white.cgColor
+        imageView?.layer.masksToBounds = true
+        let tintedImage = UIImage.hyperlink.withRenderingMode(.alwaysTemplate)
+        setImage(tintedImage, for: .normal)
+        semanticContentAttribute = .forceRightToLeft
+        sizeToFit()
         
-        layer.shadowColor = UIColor(red: 0.682, green: 0.682, blue: 0.753, alpha: 0.4).cgColor
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 1.5
+        layer.insertSublayer(whiteShadow, at: 0)
+        
+        layer.shadowColor = UIColor.smockyBlack.cgColor
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.needsDisplayOnBoundsChange = true
-        layer.masksToBounds = false
-        
-        layer1.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
-        layer1.shadowOpacity = 1
-        layer1.shadowRadius = 2
-        layer1.shadowOffset = CGSize(width: -1, height: -1)
-        layer1.needsDisplayOnBoundsChange = true
-        layer1.masksToBounds = false
-        
-        layer1.insertSublayer(layer, at: 1)
+        layer.shadowOpacity = 0.4
+        layer.shadowRadius = 3
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 16).cgPath
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer1.cornerRadius = frame.height / 2
-        layer.cornerRadius = frame.height / 2
-        layer1.frame = layer.bounds
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: imageInset, bottom: 0, right: 0)
+        contentEdgeInsets = UIEdgeInsets(top: 5, left: leftRightMargin, bottom: 5, right: leftRightMargin)
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+        whiteShadow.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+    }
+
+    override var isHighlighted: Bool {
+        willSet {
+            if newValue {
+                tintColor = .champagne
+                imageView?.tintColor = .champagne
+                layer.shadowColor = UIColor.clear.cgColor
+            } else {
+                tintColor = .coral
+                imageView?.tintColor = .coral
+                layer.shadowColor = UIColor.smockyBlack.cgColor
+            }
+        }
     }
 }

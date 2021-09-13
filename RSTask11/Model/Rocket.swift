@@ -107,6 +107,7 @@ struct Rocket {
     let images: [String]
     let wikipediaLink: String
     let id: String
+    let description: String
     
 }
 
@@ -137,6 +138,7 @@ extension Rocket: Decodable {
         let massContainer = try container.nestedContainer(keyedBy: MassCodingKeys.self, forKey: .mass)
         self.mass = try massContainer.decode(Int.self, forKey: .kg)
         
+        self.description = try container.decode(String.self, forKey: .description)
         self.successRate = try container.decode(Int.self, forKey: .success_rate_pct)
         self.firstStage = try container.decode(FirstStage.self, forKey: .first_stage)
         self.secondStage = try container.decode(SecondStage.self, forKey: .second_stage)
