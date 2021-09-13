@@ -84,6 +84,10 @@ extension UIImage {
     static var share: UIImage {
         return UIImage(named: "share")!
     }
+    
+    static var roundArrow: UIImage {
+        UIImage(named: "roundArrow")!
+    }
 }
 
 extension UIFont {

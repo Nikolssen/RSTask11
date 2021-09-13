@@ -58,7 +58,8 @@ class RocketListPresenter: RocketListPresenterType {
     
     func viewDataForCell(at index: Int) -> RocketCellViewData {
         let rocket = rockets[index]
-        return RocketCellViewData(name: rocket.name ,firstLaunch: rocket.firstLaunch.toDateFormat, cost: "\(rocket.launchCost)$", success: "\(rocket.successRate)%", imageURL: rocket.images.first, imageCacher: service.imageCacher)
+        return RocketCellViewData(name: rocket.name ,firstLaunch: rocket.firstLaunch.toDateFormat,
+                                cost: "\(rocket.launchCost)$", success: "\(rocket.successRate)%", imageURL: rocket.images.first, imageCacher: service.imageCacher)
     }
     
     func showDetailsForCell(at index: Int) {

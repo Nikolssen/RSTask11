@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="RSTask11" customModuleProvider="target">
+            <connections>
+                <outlet property="backBarButtonItem" destination="Nq7-8y-nAq" id="rvm-AN-fat"/>
+                <outlet property="forwardBarButtonItem" destination="0vf-cY-LiR" id="arw-n6-UM7"/>
+                <outlet property="safariBarButtonItem" destination="i0Z-F2-0Ke" id="BsQ-Wt-3Jr"/>
+                <outlet property="shareBarButtonItem" destination="Mc3-br-9Fe" id="Qe8-Sk-tau"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="zCS-1Y-LEP" id="DcH-0v-GYN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCS-1Y-LEP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-TJ-Uyd">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <color key="backgroundColor" name="Queen Blue"/>
+                    <items>
+                        <barButtonItem image="back" id="Nq7-8y-nAq"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="gsN-A0-hyV"/>
+                        <barButtonItem image="forward" id="0vf-cY-LiR"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZCd-TT-fDU"/>
+                        <barButtonItem image="share" id="Mc3-br-9Fe"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="s8i-4H-fZV"/>
+                        <barButtonItem image="safari" id="i0Z-F2-0Ke"/>
+                    </items>
+                    <color key="tintColor" name="Coral"/>
+                </toolbar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zCS-1Y-LEP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="23e-mm-bPE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cfL-TJ-Uyd" secondAttribute="bottom" id="7Nr-4W-lP9"/>
+                <constraint firstItem="cfL-TJ-Uyd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ho1-Ab-Ks2"/>
+                <constraint firstItem="cfL-TJ-Uyd" firstAttribute="top" secondItem="zCS-1Y-LEP" secondAttribute="bottom" id="eqn-RE-nbs"/>
+                <constraint firstItem="zCS-1Y-LEP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nW1-bS-fy1"/>
+                <constraint firstItem="cfL-TJ-Uyd" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="u8E-3q-BD2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zCS-1Y-LEP" secondAttribute="trailing" id="z31-sf-C4A"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="97.601199400299862"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="15" height="25"/>
+        <image name="forward" width="15" height="25"/>
+        <image name="safari" width="25" height="25"/>
+        <image name="share" width="20" height="25"/>
+        <namedColor name="Coral">
+            <color red="0.98900002241134644" green="0.52100002765655518" blue="0.31999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Queen Blue">
+            <color red="0.29699999094009399" green="0.37799999117851257" blue="0.52100002765655518" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

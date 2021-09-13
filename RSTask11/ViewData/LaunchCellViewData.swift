@@ -15,12 +15,11 @@ struct LaunchCellViewData {
     let number: String
     let imageURL: String?
     let imageCacher: ImageCacherType
-    
-    func loadImage(for imageView: UIImageView){
+
+    func loadImage(for imageView: UIImageView) {
         imageView.image = .defaultImage
         guard let imageURL = imageURL else {return}
-        imageCacher.loadImage(urlString: imageURL){
-            image in
+        imageCacher.loadImage(urlString: imageURL) { image in
             UIView.transition(with: imageView, duration: 0.4, options: .curveEaseInOut, animations: {
                 imageView.image = image
             }, completion: nil)

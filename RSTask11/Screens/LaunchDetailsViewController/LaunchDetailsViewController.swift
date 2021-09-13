@@ -8,6 +8,9 @@
 import UIKit
 
 class LaunchDetailsViewController: UIViewController {
+    
+    var presenter: LaunchDetailsPresenterType!
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var indicatorView: IndicatorView!
@@ -33,8 +36,12 @@ class LaunchDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = presenter.title
+        dateLabel.text = presenter.launchDate
+        indicatorView.style = presenter.isPlanned ? .clock : .checkmark
+        shadowedView.style = .number(presenter.number)
         
+    
     }
 
 }

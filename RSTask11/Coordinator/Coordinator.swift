@@ -9,26 +9,29 @@ import Foundation
 import UIKit
 
 class Coordinator {
-    
+
     let window: UIWindow
     let service: ServiceType = Service()
-    
+
     func start() {
         self.window.rootViewController = tabBarController
     }
-    
-    init(window: UIWindow){
+
+    init(window: UIWindow) {
         self.window = window
     }
-    
+
     var tabBarController: TabBarController {
         let tabBarController = TabBarController()
-        tabBarController.setViewControllers([rocketListNavigationController, launchListNavigationController, launchpadListNavigationController], animated: false)
+
+        tabBarController.setViewControllers(
+            [rocketListNavigationController, launchListNavigationController, launchpadListNavigationController],
+            animated: false)
         return tabBarController
     }
-    
+
     var rocketListNavigationController: UINavigationController {
-        
+
         let rocketListViewController = RocketListViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let rocketListPresenter = RocketListPresenter(service: service, coordinator: self)
         rocketListPresenter.delegate = rocketListViewController
@@ -39,7 +42,7 @@ class Coordinator {
         navigationController.tabBarItem.title = Strings.TabBar.rocket
         return navigationController
     }
-    
+
     var launchListNavigationController: UINavigationController {
         let launchListViewController = LaunchListViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let navigationController = UINavigationController(rootViewController: launchListViewController)
@@ -51,9 +54,10 @@ class Coordinator {
         navigationController.tabBarItem.title = Strings.TabBar.launch
         return navigationController
     }
-    
+
     var launchpadListNavigationController: UINavigationController {
-        let launchpadListViewController = LaunchpadListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let launchpadListViewController =
+            LaunchpadListViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let launchpadListPresenter = LaunchpadListPresenter(service: service, coordinator: self)
         launchpadListPresenter.delegate = launchpadListViewController
         launchpadListViewController.presenter = launchpadListPresenter
