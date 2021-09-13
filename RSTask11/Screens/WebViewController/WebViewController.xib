@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,25 +27,42 @@
             <subviews>
                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCS-1Y-LEP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="Super White"/>
                     <wkWebViewConfiguration key="configuration">
                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                         <wkPreferences key="preferences"/>
                     </wkWebViewConfiguration>
                 </wkWebView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-TJ-Uyd">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-TJ-Uyd">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <color key="backgroundColor" name="Queen Blue"/>
                     <items>
-                        <barButtonItem image="back" id="Nq7-8y-nAq"/>
+                        <barButtonItem image="back" id="Nq7-8y-nAq">
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="Byn-EJ-0SG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="gsN-A0-hyV"/>
-                        <barButtonItem image="forward" id="0vf-cY-LiR"/>
+                        <barButtonItem image="forward" id="0vf-cY-LiR">
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="r0a-5h-omG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ZCd-TT-fDU"/>
-                        <barButtonItem image="share" id="Mc3-br-9Fe"/>
+                        <barButtonItem image="share" id="Mc3-br-9Fe">
+                            <connections>
+                                <action selector="share:" destination="-1" id="KRI-b2-FHr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="s8i-4H-fZV"/>
-                        <barButtonItem image="safari" id="i0Z-F2-0Ke"/>
+                        <barButtonItem image="safari" id="i0Z-F2-0Ke">
+                            <connections>
+                                <action selector="openSafari:" destination="-1" id="fwU-wz-xzb"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                     <color key="tintColor" name="Coral"/>
+                    <color key="barTintColor" name="Queen Blue"/>
                 </toolbar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -72,6 +89,9 @@
         </namedColor>
         <namedColor name="Queen Blue">
             <color red="0.29699999094009399" green="0.37799999117851257" blue="0.52100002765655518" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Super White">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
