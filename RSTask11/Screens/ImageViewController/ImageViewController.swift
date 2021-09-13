@@ -16,6 +16,7 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         crossButton.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +26,7 @@ class ImageViewController: UIViewController {
         view.addSubview(imageScrollView)
         view.addSubview(crossButton)
         imageScrollView.addSubview(imageView)
-        
+        imageView.image = .defaultImage
         view.addGestureRecognizer(
             UITapGestureRecognizer(target: self, action: #selector(showCloseButton)))
         

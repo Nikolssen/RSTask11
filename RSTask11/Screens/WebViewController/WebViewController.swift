@@ -63,25 +63,6 @@ class WebViewController: UIViewController {
         navigationItem.rightBarButtonItem?.isEnabled = false
         webView.reload()
     }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        webView.addObserver(self, forKeyPath: "isLoading", options: [.initial, .new], context: nil)
-        webView.addObserver(self, forKeyPath: "backForwardList", options: [.new], context: nil)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        webView.removeObserver(self, forKeyPath: "isLoading")
-    }
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let keyPath = keyPath{
-            if keyPath == "isLoading" {
-                navigationItem.rightBarButtonItem?.isEnabled = !webView.isLoading
-            }
-        }
-        
-    }
     
 }
 

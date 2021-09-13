@@ -43,7 +43,12 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
 
 extension Coordinator: RocketDetailsCoordinator {
     func showFullscreenImage(with url: String) {
+        guard let tabBarController = window.rootViewController as? UITabBarController,
+              let navigationController = tabBarController.viewControllers?[0] as? UINavigationController else { return }
         
+        let imageViewController = ImageViewController()
+        imageViewController.modalPresentationStyle = .fullScreen
+        navigationController.topViewController?.present(imageViewController, animated: true, completion: nil)
     }
     
     func openWebViewLink(with url: String) {
