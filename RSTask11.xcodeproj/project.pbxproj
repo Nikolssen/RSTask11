@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */; };
 		3F38F93A26F089F300A6D7A5 /* ImageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */; };
+		3F38F93C26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */; };
 		3F6E904C26E9E66F00A9FA49 /* UITabBarTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904B26E9E66F00A9FA49 /* UITabBarTransitions.swift */; };
 		3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */; };
 		3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedMapView.swift; sourceTree = "<group>"; };
 		3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresenter.swift; sourceTree = "<group>"; };
+		3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadDetailsPresenter.swift; sourceTree = "<group>"; };
 		3F6E904B26E9E66F00A9FA49 /* UITabBarTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarTransitions.swift; sourceTree = "<group>"; };
 		3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
 		3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			children = (
 				84E0562326EE2B2000330A50 /* LaunchpadDetailsViewController.swift */,
 				84E0562426EE2B2000330A50 /* LaunchpadDetailsViewController.xib */,
+				3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */,
 			);
 			path = LaunchpadDetails;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				3F7F60E426EB32F600BB537E /* LaunchListViewController.swift in Sources */,
 				3F700E3926EF3194003B2EBB /* RocketDetailsPresenter.swift in Sources */,
 				3F95D98726E8869500ECB3D8 /* Assets.swift in Sources */,
+				3F38F93C26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift in Sources */,
 				3F6E906026EA4A6A00A9FA49 /* ShadowedView.swift in Sources */,
 				3FE2421F26EFA0120013C76C /* ImageViewController.swift in Sources */,
 				3F7F60F326EB509500BB537E /* Strings.swift in Sources */,

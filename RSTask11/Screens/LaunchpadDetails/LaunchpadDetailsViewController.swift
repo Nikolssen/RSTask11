@@ -8,7 +8,20 @@
 import UIKit
 
 class LaunchpadDetailsViewController: UIViewController {
-
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var fullNameLabel: UILabel!
+    @IBOutlet var statusView: ShadowedView!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var regionLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+    @IBOutlet var launchAttemptsLabel: UILabel!
+    @IBOutlet var launchSuccessLabel: UILabel!
+    
+    @IBOutlet var imagesStackView: UIStackView!
+    @IBOutlet var imagesCollectionView: UICollectionView!
+    @IBOutlet var shadowedMapView: ShadowedMapView!
+    @IBOutlet var rocketButton: ShadowedButton!
+    @IBOutlet var launchesLabel: ShadowedButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 

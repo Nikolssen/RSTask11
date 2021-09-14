@@ -55,8 +55,6 @@ class  ShadowedButton: UIButton {
         layer.borderWidth = 1
         layer.borderColor = UIColor.white.cgColor
         imageView?.layer.masksToBounds = true
-        let tintedImage = UIImage.hyperlink.withRenderingMode(.alwaysTemplate)
-        setImage(tintedImage, for: .normal)
         semanticContentAttribute = .forceRightToLeft
         sizeToFit()
         
