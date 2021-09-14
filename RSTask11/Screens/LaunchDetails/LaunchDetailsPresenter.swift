@@ -39,10 +39,6 @@ protocol LaunchDetailsPresenterType {
     
 }
 
-protocol LaunchDetailsCoordinator {
-    func showFullscreenImage(with url: String)
-    func openWebViewLink(with url: String)
-}
 
 protocol LaunchDetailsPresenterDelegate: AnyObject {
     func reloadRocket()
@@ -51,7 +47,7 @@ protocol LaunchDetailsPresenterDelegate: AnyObject {
 class LaunchDetailsPresenter: LaunchDetailsPresenterType {
     weak var delegate: LaunchDetailsPresenterDelegate?
     let service: ServiceType
-    let coordinator: LaunchDetailsCoordinator
+    let coordinator: DetailsCoordinator
     var rocket: Rocket?
     let launch: Launch
     
@@ -150,7 +146,7 @@ class LaunchDetailsPresenter: LaunchDetailsPresenterType {
         }
     }
     
-    init(service: ServiceType, model: Launch, coordinator: LaunchDetailsCoordinator) {
+    init(service: ServiceType, model: Launch, coordinator: DetailsCoordinator) {
         self.service = service
         self.launch = model
         self.coordinator = coordinator

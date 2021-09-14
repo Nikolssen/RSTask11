@@ -10,51 +10,89 @@ import UIKit
 
 protocol LaunchpadDetailsPresenterType {
     var title: String {get}
-    var fullNAme: String {get}
+    var fullName: String {get}
     var status: String {get}
     var description: String {get}
     var region: String {get}
     var location: String {get}
-    var launchAtterpts: String {get}
+    var launchAttempts: String {get}
     var launchSuccess: String {get}
     
-    var numberOfImages: String {get}
+    var numberOfImages: Int {get}
     var coordinates: (Double, Double) {get}
     
     var areRocketsAvailable: Bool {get}
     var areLaunchesAvaliable: Bool {get}
-    
+    func imageSelected(at index: Int)
     func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void)
 }
 
 class LaunchpadDetailsPresenter: LaunchpadDetailsPresenterType{
-    var title: String
     
-    var fullNAme: String
     
-    var status: String
+    let launchpad: Launchpad
+    let service: ServiceType
+    let coordinator: DetailsCoordinator
     
-    var description: String
-    
-    var region: String
-    
-    var location: String
-    
-    var launchAtterpts: String
-    
-    var launchSuccess: String
-    
-    var numberOfImages: String
-    
-    var coordinates: (Double, Double)
-    
-    var areRocketsAvailable: Bool
-    
-    var areLaunchesAvaliable: Bool
-    
-    func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void) {
-        <#code#>
+    var title: String {
+        launchpad.name
     }
     
+    var fullName: String {
+        launchpad.fullName
+    }
+    
+    var status: String {
+        launchpad.status
+    }
+    
+    var description: String {
+        launchpad.details
+    }
+    
+    var region: String {
+        launchpad.region
+    }
+    
+    var location: String {
+        launchpad.locality
+    }
+    
+    var launchAttempts: String {
+        "\(launchpad.launchAttempts)"
+    }
+    
+    var launchSuccess: String {
+        "\(launchpad.launchSuccesses)"
+    }
+    
+    var numberOfImages: Int {
+        launchpad.images.count
+    }
+    
+    var coordinates: (Double, Double) {
+        (launchpad.latitude, launchpad.longitude)
+    }
+    
+    var areRocketsAvailable: Bool {
+        !launchpad.rockets.isEmpty
+    }
+    
+    var areLaunchesAvaliable: Bool {
+        !launchpad.launches.isEmpty
+    }
+    
+    func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void) {
+        service.imageCacher.loadImage(urlString: launchpad.images[index], completion: callback)
+    }
+    func imageSelected(at index: Int) {
+        coordinator.showFullscreenImage(with: launchpad.images[index])
+    }
+    
+    init(service: ServiceType, coordinator: DetailsCoordinator, model: Launchpad) {
+        self.service = service
+        self.coordinator = coordinator
+        self.launchpad = model
+    }
     
 }

@@ -379,9 +379,9 @@
 		84E0562226EE2A5700330A50 /* LaunchpadDetails */ = {
 			isa = PBXGroup;
 			children = (
+				3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */,
 				84E0562326EE2B2000330A50 /* LaunchpadDetailsViewController.swift */,
 				84E0562426EE2B2000330A50 /* LaunchpadDetailsViewController.xib */,
-				3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */,
 			);
 			path = LaunchpadDetails;
 			sourceTree = "<group>";

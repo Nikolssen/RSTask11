@@ -47,7 +47,7 @@ protocol RocketDetailsPresenterType {
     func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void)
 }
 
-protocol RocketDetailsCoordinator {
+protocol DetailsCoordinator {
     func showFullscreenImage(with url: String)
     func openWebViewLink(with url: String)
 }
@@ -55,7 +55,7 @@ protocol RocketDetailsCoordinator {
 class RocketDetailsPresenter: RocketDetailsPresenterType {
  
     let service: ServiceType
-    let coordinator: RocketDetailsCoordinator
+    let coordinator: DetailsCoordinator
     let rocket: Rocket
     
     var title: String{
@@ -193,7 +193,7 @@ class RocketDetailsPresenter: RocketDetailsPresenterType {
         return rocket.images.count
     }
     
-    init(service: ServiceType, model: Rocket, coordinator: RocketDetailsCoordinator) {
+    init(service: ServiceType, model: Rocket, coordinator: DetailsCoordinator) {
         self.service = service
         self.rocket = model
         self.coordinator = coordinator

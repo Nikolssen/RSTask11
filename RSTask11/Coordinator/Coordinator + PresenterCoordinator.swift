@@ -40,11 +40,13 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
               let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
         let launchpadDetailsViewController =
             LaunchpadDetailsViewController(nibName: "LaunchpadDetailsViewController", bundle: nil)
+        let launchpadDetailsPresenter = LaunchpadDetailsPresenter(service: service, coordinator: self, model: model)
+        launchpadDetailsViewController.presenter = launchpadDetailsPresenter
         navigationController.pushViewController(launchpadDetailsViewController, animated: true)
     }
 }
 
-extension Coordinator: RocketDetailsCoordinator, LaunchDetailsCoordinator {
+extension Coordinator: DetailsCoordinator {
     func showFullscreenImage(with url: String) {
         guard let tabBarController = window.rootViewController as? UITabBarController,
               let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
