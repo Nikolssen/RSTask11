@@ -32,4 +32,8 @@ class ImageCacher: ImageCacherType {
         }
         task.resume()
     }
+    
+    init() {
+        imageCache.totalCostLimit = 1024 * 1024 * 120 // 120 MBytes
+    }
 }
