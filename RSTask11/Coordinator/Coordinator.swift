@@ -21,8 +21,9 @@ class Coordinator {
         self.window = window
     }
 
-    var tabBarController: TabBarController {
-        let tabBarController = TabBarController()
+    var tabBarController: UITabBarController {
+        let tabBarController = UITabBarController()
+        tabBarController.delegate = tabBarController
 
         tabBarController.setViewControllers(
             [rocketListNavigationController, launchListNavigationController, launchpadListNavigationController],

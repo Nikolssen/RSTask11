@@ -20,16 +20,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LaunchDetailsViewController" customModule="RSTask11" customModuleProvider="target">
             <connections>
-                <outlet property="compaignButton" destination="NZy-a0-Fje" id="PD8-Jl-iDe"/>
+                <outlet property="campaignButton" destination="NZy-a0-Fje" id="kb2-o9-Q3d"/>
                 <outlet property="dateLabel" destination="YaC-06-T9k" id="bKv-Wb-gOk"/>
                 <outlet property="descriptionLabel" destination="PSP-IZ-0Zu" id="O9K-xK-clt"/>
+                <outlet property="descriptionStackView" destination="66D-3Q-Ik0" id="ttD-vW-RE1"/>
                 <outlet property="imagesCollectionView" destination="bJ8-GH-VCb" id="z8c-GA-tlV"/>
                 <outlet property="imagesStackView" destination="DLI-vS-Lhf" id="Di1-T6-htc"/>
                 <outlet property="indicatorView" destination="Par-Mv-E4W" id="2GS-u2-QJd"/>
                 <outlet property="launchButton" destination="EvS-p8-0Wo" id="2nX-wd-S2d"/>
                 <outlet property="launchDateLabel" destination="ydd-mW-eG1" id="rFn-4b-Jzd"/>
+                <outlet property="launchDateMarker" destination="i5I-2n-WAT" id="CLt-D1-IR8"/>
                 <outlet property="materialsStackView" destination="m40-IJ-nS5" id="F1M-D1-ojh"/>
                 <outlet property="mediaButton" destination="hKH-5o-sak" id="iIe-aU-qnX"/>
+                <outlet property="overviewStackView" destination="2KU-EF-XcO" id="l2X-eQ-YAU"/>
                 <outlet property="recoveryButton" destination="EvX-UW-eUc" id="HFe-Iw-pV0"/>
                 <outlet property="redditStackView" destination="V1s-ts-LI9" id="jpW-Mo-j8n"/>
                 <outlet property="rocketCollectionView" destination="pMa-Zh-Map" id="2rw-hN-eEg"/>
@@ -37,10 +40,12 @@
                 <outlet property="shadowedImageView" destination="TDx-Wx-OIV" id="MNF-09-ulo"/>
                 <outlet property="shadowedView" destination="KNj-dj-Btf" id="2MT-56-wkZ"/>
                 <outlet property="staticFireDateLabel" destination="isq-Me-NZh" id="9k8-Da-nRw"/>
+                <outlet property="staticFireDateMarker" destination="Sa5-hc-3V5" id="2gl-oe-2E7"/>
                 <outlet property="successLabel" destination="zAk-3b-uDg" id="Fj0-w2-31v"/>
+                <outlet property="successMarker" destination="rQj-1a-uT4" id="Pcp-d7-GCs"/>
                 <outlet property="titleLabel" destination="2wu-5J-E6y" id="AAI-By-odH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="wikipediaButton" destination="rvW-sY-9xW" id="hLj-m5-XLW"/>
+                <outlet property="wikipediaButton" destination="rvW-sY-9xW" id="w0U-pd-Yr7"/>
                 <outlet property="youtubeButton" destination="L2n-Nq-djl" id="nkT-9y-efb"/>
             </connections>
         </placeholder>
@@ -82,7 +87,7 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xpx-7w-n0V">
-                            <rect key="frame" x="20" y="183" width="355" height="1143"/>
+                            <rect key="frame" x="20" y="183" width="355" height="1148"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="66D-3Q-Ik0">
                                     <rect key="frame" x="0.0" y="0.0" width="355" height="64.5"/>
@@ -96,7 +101,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSP-IZ-0Zu">
                                             <rect key="frame" x="0.0" y="48" width="355" height="16.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="Smocky Black"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -164,7 +169,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-vS-Lhf">
-                                    <rect key="frame" x="0.0" y="252" width="355" height="238"/>
+                                    <rect key="frame" x="0.0" y="252" width="355" height="243"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV6-cU-d4J">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
@@ -172,12 +177,13 @@
                                             <color key="textColor" name="Smocky Black"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-GH-VCb">
-                                            <rect key="frame" x="0.0" y="48" width="355" height="190"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-GH-VCb">
+                                            <rect key="frame" x="0.0" y="48" width="355" height="195"/>
+                                            <color key="backgroundColor" name="Super White"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="190" id="lOq-VV-FR6"/>
+                                                <constraint firstAttribute="height" constant="195" id="lOq-VV-FR6"/>
                                             </constraints>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QOj-hz-aVo">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QOj-hz-aVo">
                                                 <size key="itemSize" width="128" height="128"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -186,18 +192,18 @@
                                         </collectionView>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cCG-Mc-DYS">
-                                    <rect key="frame" x="0.0" y="520" width="355" height="387"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cCG-Mc-DYS">
+                                    <rect key="frame" x="0.0" y="525" width="355" height="387"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evO-rU-zYA">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="76.5" height="28"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
                                             <color key="textColor" name="Smocky Black"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-Zh-Map">
                                             <rect key="frame" x="0.0" y="48" width="355" height="339"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" name="Super White"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="pMa-Zh-Map" secondAttribute="height" multiplier="377:360" id="0AD-1X-IX1"/>
                                             </constraints>
@@ -211,7 +217,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m40-IJ-nS5">
-                                    <rect key="frame" x="0.0" y="937" width="355" height="88"/>
+                                    <rect key="frame" x="0.0" y="942" width="355" height="88"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LA-3s-JFw">
                                             <rect key="frame" x="0.0" y="0.0" width="98" height="28"/>
@@ -225,10 +231,16 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvW-sY-9xW" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="9" width="95" height="22"/>
                                                     <state key="normal" title="Wikipedia" image="hyperlink"/>
+                                                    <connections>
+                                                        <action selector="openLink:" destination="-1" eventType="touchUpInside" id="eKZ-tb-I4Y"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-Nq-djl" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                     <rect key="frame" x="110" y="9" width="83" height="22"/>
                                                     <state key="normal" title="Youtube" image="hyperlink"/>
+                                                    <connections>
+                                                        <action selector="openLink:" destination="-1" eventType="touchUpInside" id="29Q-d1-nNi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -238,7 +250,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-ts-LI9">
-                                    <rect key="frame" x="0.0" y="1055" width="355" height="88"/>
+                                    <rect key="frame" x="0.0" y="1060" width="355" height="88"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reddit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-su-6da">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28"/>
@@ -246,7 +258,7 @@
                                             <color key="textColor" name="Smocky Black"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G1-7j-5hw">
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G1-7j-5hw">
                                             <rect key="frame" x="0.0" y="48" width="355" height="40"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qLp-mg-K6s">
@@ -255,18 +267,30 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvX-UW-eUc" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="91" height="22"/>
                                                             <state key="normal" title="Recovery" image="hyperlink"/>
+                                                            <connections>
+                                                                <action selector="openLink:" destination="-1" eventType="touchUpInside" id="dgr-rU-CEC"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKH-5o-sak" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                             <rect key="frame" x="106" y="0.0" width="66" height="22"/>
                                                             <state key="normal" title="Media" image="hyperlink"/>
+                                                            <connections>
+                                                                <action selector="openLink:" destination="-1" eventType="touchUpInside" id="xNp-ie-f9J"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-a0-Fje" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                             <rect key="frame" x="187" y="0.0" width="98" height="22"/>
                                                             <state key="normal" title="Campaign" image="hyperlink"/>
+                                                            <connections>
+                                                                <action selector="openLink:" destination="-1" eventType="touchUpInside" id="nye-oG-3pp"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvS-p8-0Wo" customClass="ShadowedButton" customModule="RSTask11" customModuleProvider="target">
                                                             <rect key="frame" x="300" y="0.0" width="75" height="22"/>
                                                             <state key="normal" title="Launch" image="hyperlink"/>
+                                                            <connections>
+                                                                <action selector="openLink:" destination="-1" eventType="touchUpInside" id="ySQ-5k-1OF"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -295,6 +319,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="TDx-Wx-OIV" firstAttribute="top" secondItem="uQ4-fw-7Xf" secondAttribute="top" constant="30" id="6qG-b7-NGo"/>
+                        <constraint firstItem="TDx-Wx-OIV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2wu-5J-E6y" secondAttribute="trailing" constant="29.5" id="8FF-V5-gdJ"/>
                         <constraint firstAttribute="bottom" secondItem="Xpx-7w-n0V" secondAttribute="bottom" constant="40" id="9CN-fP-svX"/>
                         <constraint firstItem="Par-Mv-E4W" firstAttribute="leading" secondItem="uQ4-fw-7Xf" secondAttribute="leading" constant="20" id="A89-im-97Z"/>
                         <constraint firstItem="5GM-Zn-hD6" firstAttribute="trailing" secondItem="TDx-Wx-OIV" secondAttribute="trailing" constant="46.5" id="D8h-3g-DR2"/>

@@ -10,13 +10,14 @@ class ImageViewController: UIViewController {
     let crossButton = ShadowedButton()
     let imageScrollView = UIScrollView()
     let imageView = UIImageView()
-    
+    var presenter: ImageViewPresenterType!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        imageScrollView.showsVerticalScrollIndicator = false
+        imageScrollView.showsHorizontalScrollIndicator = false
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         crossButton.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,8 +28,7 @@ class ImageViewController: UIViewController {
         view.addSubview(crossButton)
         imageScrollView.addSubview(imageView)
         imageView.image = .defaultImage
-        view.addGestureRecognizer(
-            UITapGestureRecognizer(target: self, action: #selector(showCloseButton)))
+
         
         crossButton.addTarget(self, action: #selector(dismissModal), for: .touchUpInside)
         
@@ -44,10 +44,31 @@ class ImageViewController: UIViewController {
             crossButton.widthAnchor.constraint(equalToConstant: 40)
         ])
         
-        crossButton.setImage(.cross, for: .normal)
-        crossButton.setImage(.cross, for: .highlighted)
-        crossButton.setTitle("", for: .normal)
-        crossButton.setTitle("", for: .highlighted)
+        crossButton.setImage(.circledCross, for: .normal)
+        crossButton.setImage(.circledCross, for: .highlighted)
+        crossButton.setTitle(nil, for: .normal)
+        crossButton.setTitle(nil, for: .highlighted)
+        
+        view.backgroundColor = .white
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(dismissModal))
+        swipeGestureRecognizer.numberOfTouchesRequired = 1
+        swipeGestureRecognizer.direction = .down
+        
+        view.addGestureRecognizer(swipeGestureRecognizer)
+        
+        let doubleGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(doubleTap))
+        view.addGestureRecognizer(doubleGestureRecognizer)
+        doubleGestureRecognizer.numberOfTapsRequired = 2
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showCloseButton))
+        tapGestureRecognizer.require(toFail: doubleGestureRecognizer)
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+        presenter.loadImage{ [weak self] in
+            self?.imageView.image = $0
+            self?.view.layoutSubviews()
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -85,11 +106,32 @@ class ImageViewController: UIViewController {
     }
     
     @objc func showCloseButton(){
-        crossButton.isHidden.toggle()
+        if crossButton.isHidden && imageScrollView.minimumZoomScale >= imageScrollView.zoomScale {
+            view.backgroundColor = .white
+            crossButton.isHidden = false
+            
+        }
+        else {
+            view.backgroundColor = .black
+            crossButton.isHidden = true
+            
+        }
+        
     }
     
     @objc func dismissModal(){
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func doubleTap() {
+        let zoomScale = imageScrollView.zoomScale
+        let averageScale = (imageScrollView.maximumZoomScale + imageScrollView.minimumZoomScale) / 2
+        if zoomScale > averageScale {
+            imageScrollView.setZoomScale(imageScrollView.minimumZoomScale, animated: true)
+        }
+        else {
+            imageScrollView.setZoomScale(imageScrollView.maximumZoomScale, animated: true)
+        }
     }
     
 }
@@ -103,5 +145,14 @@ extension ImageViewController: UIScrollViewDelegate{
         let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
         let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
         scrollView.contentInset = UIEdgeInsets(top: offsetY, left: offsetX, bottom: 0, right: 0)
+    }
+    
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        if !crossButton.isHidden {
+            self.view.backgroundColor = .black
+            crossButton.isHidden = true
+        }
+
+        
     }
 }

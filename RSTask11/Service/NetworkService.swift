@@ -8,13 +8,13 @@
 import Foundation
 
 protocol NetworkServiceType {
-    func get<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void)
+    func get<T: Decodable>(request: Request, callback: @escaping (Result<T, Error>) -> Void)
 }
 
 class NetworkService: NetworkServiceType{
     lazy private var jsonDecoder = JSONDecoder()
 
-    func get<T: Decodable>(request: Request, callback: @escaping (Result<[T], Error>) -> Void) {
+    func get<T: Decodable>(request: Request, callback: @escaping (Result<T, Error>) -> Void) {
         
         guard let url = buildURL(request: request) else {
             callback(.failure(NSError(domain: "", code: 2002, userInfo: [:])))
@@ -33,7 +33,7 @@ class NetworkService: NetworkServiceType{
                     return
             }
             
-            if let responseObject = try? jsonDecoder.decode([T].self, from: data) {
+            if let responseObject = try? jsonDecoder.decode(T.self, from: data) {
                 callback(.success(responseObject))
             }
             else {
@@ -49,11 +49,14 @@ class NetworkService: NetworkServiceType{
     
     private func buildURL(request: Request) -> URL? {
  
-        if case let .request(scheme: scheme, host: host, path: path) = request {
+        if case let .request(scheme: scheme, host: host, path: path, id: id) = request {
             var components = URLComponents()
             components.scheme = scheme
             components.host = host
             components.path = path
+            if let id = id {
+                components.path = path+"/\(id)"
+            }
             return components.url
         }
         return nil
@@ -61,9 +64,12 @@ class NetworkService: NetworkServiceType{
 }
 
 enum Request {
-    case request(scheme: String, host: String, path: String)
+    case request(scheme: String, host: String, path: String, id: String?)
     
-    static let rockets: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v4/rockets")
-    static let launches: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v5/launches")
-    static let launchpads: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v4/launchpads")
+    static let rockets: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v4/rockets", id: nil)
+    static let launches: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v5/launches", id: nil)
+    static let launchpads: Request = .request(scheme: "https", host: "api.spacexdata.com", path: "/v4/launchpads", id: nil)
+    static func rocket(id: String) -> Request {
+        .request(scheme: "https", host: "api.spacexdata.com", path: "/v4/rockets", id: id)
+    }
 }

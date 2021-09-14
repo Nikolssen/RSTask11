@@ -1,5 +1,5 @@
 //
-//  TabBarController+Transitions.swift
+//  UITabBarTransitions.swift
 //  RSTask11
 //
 //  Created by Ivan Budovich on 9/9/21.
@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 
 
-extension TabBarController: UITabBarControllerDelegate {
+extension UITabBarController: UITabBarControllerDelegate {
     
-    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    enum Constants {
+        static let animationDuration: TimeInterval = 0.25
+    }
+    
+    public func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let viewControllers = viewControllers, let fromVCIndex = viewControllers.firstIndex(of: fromVC), let toVCIndex = viewControllers.firstIndex(of: toVC)  else { return nil }
         if fromVCIndex < toVCIndex {
             return TabBarAnimatedTransitioning(style: .forward)
@@ -32,7 +36,7 @@ class TabBarAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioni
     let style: TabBarAnimatedTransitioning.Style
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        TabBarController.Constants.animationDuration
+        UITabBarController.Constants.animationDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -54,7 +58,7 @@ class TabBarAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioni
         
         DispatchQueue.main.async {
             transitionContext.containerView.addSubview(toView)
-            UIView.animate(withDuration: TabBarController.Constants.animationDuration, animations: {
+            UIView.animate(withDuration: UITabBarController.Constants.animationDuration, animations: {
                 fromView.frame = fromFrameEnd
                 toView.frame = frame
             }, completion: {success in

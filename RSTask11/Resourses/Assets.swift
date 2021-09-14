@@ -10,109 +10,113 @@ import UIKit
 
 extension UIColor{
     static var smockyBlack: UIColor {
-        return UIColor(named: "Smocky Black")!
+        UIColor(named: "Smocky Black")!
     }
     
     static var superWhite: UIColor {
-        return UIColor(named: "Super White")!
+        UIColor(named: "Super White")!
     }
     
     static var champagne: UIColor {
-        return UIColor(named: "Champagne")!
+        UIColor(named: "Champagne")!
     }
     
     static var slateGray: UIColor {
-        return UIColor(named: "Slate Gray")!
+        UIColor(named: "Slate Gray")!
     }
     
     static var glaucous: UIColor {
-        return UIColor(named: "Glaucous")!
+        UIColor(named: "Glaucous")!
     }
     
     static var queenBlue: UIColor {
-        return UIColor(named: "Queen Blue")!
+        UIColor(named: "Queen Blue")!
     }
     
     static var coral: UIColor {
-        return UIColor(named: "Coral")!
+        UIColor(named: "Coral")!
     }
     
     static var cyanProcess: UIColor {
-        return UIColor(named: "Cyan Process")!
+        UIColor(named: "Cyan Process")!
     }
     
 }
 
 extension UIImage {
     static var rocket: UIImage {
-        return UIImage(named: "rocket")!
+        UIImage(named: "rocket")!
     }
     
     static var adjustment: UIImage {
-        return UIImage(named: "adjustment")!
+        UIImage(named: "adjustment")!
     }
     
     static var lego: UIImage {
-        return UIImage(named: "lego")!
+        UIImage(named: "lego")!
     }
     
     static var bidirectionalArrow: UIImage {
-        return UIImage(named: "biarrow")!
+        UIImage(named: "biarrow")!
     }
     
     static var checkmark: UIImage {
-        return UIImage(named: "checkmark")!
+        UIImage(named: "checkmark")!
     }
     
     static var hyperlink: UIImage {
-        return UIImage(named: "hyperlink")!
+        UIImage(named: "hyperlink")!
     }
     
     static var defaultImage: UIImage {
-        return UIImage(named: "defaultImage")!
+        UIImage(named: "defaultImage")!
     }
     static var safari: UIImage {
-        return UIImage(named: "safari")!
+        UIImage(named: "safari")!
     }
     
     static var clock: UIImage {
-        return UIImage(named: "clock")!
+        UIImage(named: "clock")!
     }
     static var cross: UIImage {
-        return UIImage(named: "cross")!
+        UIImage(named: "cross")!
     }
     static var share: UIImage {
-        return UIImage(named: "share")!
+        UIImage(named: "share")!
     }
     
     static var roundArrow: UIImage {
         UIImage(named: "roundArrow")!
+    }
+    
+    static var circledCross: UIImage {
+        UIImage(named: "circledCross")!
     }
 }
 
 extension UIFont {
     
     static var robotoBold14: UIFont {
-        return UIFont(name: "Roboto-Bold", size: 14)!
+        UIFont(name: "Roboto-Bold", size: 14)!
     }
     
     static var robotoBold24: UIFont {
-        return UIFont(name: "Roboto-Bold", size: 24)!
+        UIFont(name: "Roboto-Bold", size: 24)!
     }
     
     static var robotoBold48: UIFont {
-        return UIFont(name: "Roboto-Bold", size: 48)!
+        UIFont(name: "Roboto-Bold", size: 48)!
     }
     
     static var robotoMedium17: UIFont {
-        return UIFont(name: "Roboto-Medium", size: 17)!
+        UIFont(name: "Roboto-Medium", size: 17)!
     }
     
     static var robotoMedium13: UIFont {
-        return UIFont(name: "Roboto-Medium", size: 13)!
+        UIFont(name: "Roboto-Medium", size: 13)!
     }
     
     static var robotoMedium10: UIFont {
-        return UIFont(name: "Roboto-Medium", size: 10)!
+        UIFont(name: "Roboto-Medium", size: 10)!
     }
 }

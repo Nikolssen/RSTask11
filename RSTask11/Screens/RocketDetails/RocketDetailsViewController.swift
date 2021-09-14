@@ -137,6 +137,7 @@ class RocketDetailsViewController: UIViewController {
             imageStackView.isHidden = true
         }
         
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -153,6 +154,15 @@ class RocketDetailsViewController: UIViewController {
     
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        hidesBottomBarWhenPushed = true
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
 }
 

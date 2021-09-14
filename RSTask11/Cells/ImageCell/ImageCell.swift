@@ -19,13 +19,14 @@ class ImageCell: UICollectionViewCell {
         layer.shadowRadius = 1.5
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowColor = UIColor(red: 0.682, green: 0.682, blue: 0.753, alpha: 0.4).cgColor
-        
+        layer.shadowColor = UIColor.smockyBlack.cgColor
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 3
         layer1.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
         layer1.cornerRadius = 10
         layer1.opacity = 1.0
         layer1.shadowRadius = 1.5
-        layer1.shadowOffset = CGSize(width: -1, height: -1)
+        layer1.shadowOffset = CGSize(width: -2, height: -1)
         layer.insertSublayer(layer1, at: 0)
         imageView.layer.cornerRadius = 7
     }
@@ -33,7 +34,7 @@ class ImageCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer1.frame = layer.bounds
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
-        layer1.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 9).cgPath
+        layer1.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 9).cgPath
     }
 }

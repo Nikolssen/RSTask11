@@ -52,7 +52,6 @@ class  ShadowedButton: UIButton {
         tintColor = .coral
         backgroundColor = .white
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius =  16
         layer.borderWidth = 1
         layer.borderColor = UIColor.white.cgColor
         imageView?.layer.masksToBounds = true
@@ -72,10 +71,17 @@ class  ShadowedButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageEdgeInsets = UIEdgeInsets(top: 0, left: imageInset, bottom: 0, right: 0)
-        contentEdgeInsets = UIEdgeInsets(top: 5, left: leftRightMargin, bottom: 5, right: leftRightMargin)
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
-        whiteShadow.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+        if title(for: .normal) != nil {
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: imageInset, bottom: 0, right: 0)
+            contentEdgeInsets = UIEdgeInsets(top: 5, left: leftRightMargin, bottom: 5, right: leftRightMargin)
+        }
+        else {
+            imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+
+        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.height / 2).cgPath
+        whiteShadow.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: frame.height / 2).cgPath
+        layer.cornerRadius = frame.height / 2
     }
 
     override var isHighlighted: Bool {
