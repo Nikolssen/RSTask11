@@ -46,6 +46,9 @@ class LaunchpadDetailsViewController: UIViewController {
         else {
             imagesStackView.isHidden = true
         }
+        
+        navigationItem.title = presenter.title
+        
         let annotation = MKPointAnnotation()
         let coordinates = presenter.coordinates
         annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.0, longitude: coordinates.1)

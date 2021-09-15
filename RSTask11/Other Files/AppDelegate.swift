@@ -40,6 +40,7 @@ extension AppDelegate {
         navigationBarAppearence.barTintColor = .queenBlue
         navigationBarAppearence.isTranslucent = false
         navigationBarAppearence.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearence.titleTextAttributes = [.font: UIFont.robotoBold24, .foregroundColor : UIColor.superWhite]
         let barButtonItemAppearence = UIBarButtonItem.appearance()
         barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.robotoMedium17, .foregroundColor: UIColor.champagne], for: .highlighted)
         barButtonItemAppearence.setTitleTextAttributes([.font: UIFont.robotoMedium17, .foregroundColor: UIColor.coral], for: .normal)

@@ -128,6 +128,7 @@ class LaunchDetailsViewController: UIViewController {
             
             launchButton.isHidden = !reddit.3
         }
+        navigationItem.title = presenter.title
         
     }
     override func viewWillAppear(_ animated: Bool) {

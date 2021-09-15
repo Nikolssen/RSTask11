@@ -60,8 +60,15 @@ class WebViewController: UIViewController {
     }
 
     @objc func updatePage(){
-        navigationItem.rightBarButtonItem?.isEnabled = false
-        webView.reload()
+        if webView.isLoading {
+            webView.stopLoading()
+            navigationItem.rightBarButtonItem?.image = .roundArrow
+        }
+        else {
+            navigationItem.rightBarButtonItem?.image = .cross
+            webView.reload()
+        }
+
     }
     
 }
@@ -71,6 +78,7 @@ extension WebViewController: WKNavigationDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         backBarButtonItem.isEnabled = (webView.backForwardList.backItem != nil)
         forwardBarButtonItem.isEnabled = (webView.backForwardList.forwardItem != nil)
-        navigationItem.rightBarButtonItem?.isEnabled = true
+        navigationItem.rightBarButtonItem?.image = .roundArrow
+        navigationItem.title = webView.title
     }
 }
