@@ -10,7 +10,7 @@
 		3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */; };
 		3F38F93A26F089F300A6D7A5 /* ImageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */; };
 		3F38F93C26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */; };
-		3F6E904C26E9E66F00A9FA49 /* UITabBarTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904B26E9E66F00A9FA49 /* UITabBarTransitions.swift */; };
+		3F6E904C26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904B26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift */; };
 		3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */; };
 		3F6E905226E9EE5C00A9FA49 /* RocketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */; };
 		3F6E905326E9EE5C00A9FA49 /* RocketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */; };
@@ -40,6 +40,7 @@
 		3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */; };
 		3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */; };
 		3FB6612526EB972D00661134 /* Coordinator + PresenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */; };
+		3FCEB9FB26F20835000253F0 /* UINavigationControllerTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */; };
 		3FE2421226EF6E4E0013C76C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421026EF6E4E0013C76C /* ImageCell.swift */; };
 		3FE2421326EF6E4E0013C76C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2421126EF6E4E0013C76C /* ImageCell.xib */; };
 		3FE2421626EF903C0013C76C /* LaunchDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421526EF903C0013C76C /* LaunchDetailsPresenter.swift */; };
@@ -64,7 +65,7 @@
 		3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedMapView.swift; sourceTree = "<group>"; };
 		3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresenter.swift; sourceTree = "<group>"; };
 		3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadDetailsPresenter.swift; sourceTree = "<group>"; };
-		3F6E904B26E9E66F00A9FA49 /* UITabBarTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarTransitions.swift; sourceTree = "<group>"; };
+		3F6E904B26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerTransitions.swift; sourceTree = "<group>"; };
 		3F6E904E26E9EE3400A9FA49 /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
 		3F6E905026E9EE5C00A9FA49 /* RocketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCell.swift; sourceTree = "<group>"; };
 		3F6E905126E9EE5C00A9FA49 /* RocketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketCell.xib; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator + PresenterCoordinator.swift"; sourceTree = "<group>"; };
+		3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTransitions.swift; sourceTree = "<group>"; };
 		3FE2421026EF6E4E0013C76C /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3FE2421126EF6E4E0013C76C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		3FE2421526EF903C0013C76C /* LaunchDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 		3F38F93526F0839E00A6D7A5 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
-				3F6E904B26E9E66F00A9FA49 /* UITabBarTransitions.swift */,
+				3F6E904B26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift */,
+				3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -303,9 +306,9 @@
 				84E0562226EE2A5700330A50 /* LaunchpadDetails */,
 				84E0562126EE2A4600330A50 /* LaunchDetails */,
 				84E0562026EE2A3300330A50 /* RocketDetails */,
+				3F6E904D26E9EE0300A9FA49 /* RocketList */,
 				3F7F60E526EB350400BB537E /* LaunchpadList */,
 				3F6E905426EA3BA900A9FA49 /* LaunchList */,
-				3F6E904D26E9EE0300A9FA49 /* RocketList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -488,7 +491,7 @@
 				3FE2421B26EF98500013C76C /* WebViewController.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
 				3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */,
-				3F6E904C26E9E66F00A9FA49 /* UITabBarTransitions.swift in Sources */,
+				3F6E904C26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift in Sources */,
 				84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */,
 				3F7F60F126EB4C1C00BB537E /* Launch.swift in Sources */,
 				3FE2421226EF6E4E0013C76C /* ImageCell.swift in Sources */,
@@ -499,6 +502,7 @@
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
 				84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */,
 				3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */,
+				3FCEB9FB26F20835000253F0 /* UINavigationControllerTransitions.swift in Sources */,
 				84E0562F26EE2B4A00330A50 /* RocketDetailsViewController.swift in Sources */,
 				3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */,
 				3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */,

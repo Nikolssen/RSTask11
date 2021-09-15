@@ -14,6 +14,7 @@ class RocketCell: UICollectionViewCell {
     @IBOutlet var firstLaunchLabel: UILabel!
     @IBOutlet var launchCostLabel: UILabel!
     @IBOutlet var successRateLabel: UILabel!
+    @IBOutlet var stackView: UIStackView!
     
     enum Constants {
         static let widthToHeightRatio: CGFloat = 377.0 / 360
@@ -38,6 +39,7 @@ class RocketCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        stackView.isHidden = false
     }
     
 }

@@ -48,6 +48,10 @@ class RocketDetailsViewController: UIViewController {
     @IBOutlet var enginePropellant1Label: UILabel!
     @IBOutlet var enginePropellant2Label: UILabel!
     
+    @IBOutlet var imageViewTopConstaint: NSLayoutConstraint!
+    @IBOutlet var scrollViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet var backButtonTopConstraint: NSLayoutConstraint!
+    
     let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
@@ -56,7 +60,6 @@ class RocketDetailsViewController: UIViewController {
         gradientLayer.endPoint = CGPoint(x: 0, y: 01)
         return gradientLayer
     }()
-    
     var presenter: RocketDetailsPresenterType!
     
     override func viewDidLoad() {
@@ -137,7 +140,9 @@ class RocketDetailsViewController: UIViewController {
             imageStackView.isHidden = true
         }
         
-        
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        scrollViewTopConstraint.constant = -statusBarHeight
+        imageViewTopConstaint.constant = -statusBarHeight
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

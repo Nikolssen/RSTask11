@@ -12,7 +12,7 @@ class Coordinator {
 
     let window: UIWindow
     let service: ServiceType = Service()
-
+    var delegates: [Any] = []
     func start() {
         self.window.rootViewController = tabBarController
     }
@@ -41,6 +41,9 @@ class Coordinator {
         navigationController.tabBarItem.image = .rocket
         navigationController.tabBarItem.selectedImage = .rocket
         navigationController.tabBarItem.title = Strings.TabBar.rocket
+        let delegate = RocketsNavigationControllerDelegate()
+        navigationController.delegate = delegate
+        delegates.append(delegate)
         return navigationController
     }
 

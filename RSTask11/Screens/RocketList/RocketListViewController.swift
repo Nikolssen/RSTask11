@@ -12,6 +12,8 @@ final class RocketListViewController: UICollectionViewController {
 
     var presenter: RocketListPresenterType!
     
+    private var selectedIndexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .queenBlue
@@ -25,6 +27,12 @@ final class RocketListViewController: UICollectionViewController {
         presenter?.viewWillBecomeActive()
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedIndexPath = nil
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView.reloadData()
@@ -48,6 +56,7 @@ final class RocketListViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
         presenter.showDetailsForCell(at: indexPath.item)
     }
     func configureNavigationBar(){
@@ -73,6 +82,13 @@ final class RocketListViewController: UICollectionViewController {
         alertController.addAction(successRateAlertAction)
         alertController.addAction(cancelAlertAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func selectedCell() -> UICollectionViewCell? {
+        if let indexPath = self.selectedIndexPath {
+            return collectionView.cellForItem(at: indexPath)
+        }
+        return nil
     }
 }
 
