@@ -25,6 +25,7 @@ protocol LaunchDetailsPresenterType {
     var launchDate: String? {get}
     var success: String? {get}
     var hasRocket: Bool {get}
+    var isRocketLoaded: Bool {get}
     var rocketViewData: RocketCellViewData? {get}
     var delegate: LaunchDetailsPresenterDelegate? {get set}
     var numberOfImages: Int {get}
@@ -35,10 +36,12 @@ protocol LaunchDetailsPresenterType {
     func onViewActive()
     func loadTitleImage(callback: @escaping (UIImage) -> Void)
     func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void)
-    
+    func showRocketDetails()
     
 }
-
+protocol LaunchDetailsCoordinator: DetailsCoordinator {
+    func showRocket(model: Rocket)
+}
 
 protocol LaunchDetailsPresenterDelegate: AnyObject {
     func reloadRocket()
@@ -47,7 +50,7 @@ protocol LaunchDetailsPresenterDelegate: AnyObject {
 class LaunchDetailsPresenter: LaunchDetailsPresenterType {
     weak var delegate: LaunchDetailsPresenterDelegate?
     let service: ServiceType
-    let coordinator: DetailsCoordinator
+    let coordinator:  LaunchDetailsCoordinator
     var rocket: Rocket?
     let launch: Launch
     
@@ -85,6 +88,9 @@ class LaunchDetailsPresenter: LaunchDetailsPresenterType {
     var hasRocket: Bool {
         
         launch.rocket != nil
+    }
+    var isRocketLoaded: Bool {
+        return rocket != nil
     }
     
     var rocketViewData: RocketCellViewData? {
@@ -146,14 +152,14 @@ class LaunchDetailsPresenter: LaunchDetailsPresenterType {
         }
     }
     
-    init(service: ServiceType, model: Launch, coordinator: DetailsCoordinator) {
+    init(service: ServiceType, model: Launch, coordinator: LaunchDetailsCoordinator) {
         self.service = service
         self.launch = model
         self.coordinator = coordinator
     }
     
     func onViewActive() {
-        guard let rocketID = launch.rocket else {return}
+        guard let rocketID = launch.rocket, self.rocket == nil else {return}
         
         let completion: (Result<Rocket, Error>) -> Void = {[weak self]
             result in
@@ -172,6 +178,12 @@ class LaunchDetailsPresenter: LaunchDetailsPresenterType {
         DispatchQueue.global(qos: .utility).async {
             self.service.networkService.get(request: .rocket(id: rocketID), callback: completion)
         }
+    }
+    func showRocketDetails() {
+        if let rocket = rocket {
+            coordinator.showRocket(model: rocket)
+        }
+        
     }
     
 }

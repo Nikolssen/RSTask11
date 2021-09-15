@@ -132,7 +132,8 @@ class LaunchDetailsViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         presenter.onViewActive()
     }
     
@@ -183,7 +184,10 @@ extension LaunchDetailsViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView === imagesCollectionView {
             return presenter.numberOfImages
         }
-        return 1
+        if collectionView === rocketCollectionView, presenter.isRocketLoaded {
+            return 1
+        }
+        return 0
         
     }
     
@@ -213,6 +217,9 @@ extension LaunchDetailsViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView === imagesCollectionView {
             presenter.imageSelected(at: indexPath.item)
+        }
+        else {
+            presenter.showRocketDetails()
         }
         
     }

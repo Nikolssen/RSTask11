@@ -46,7 +46,7 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
     }
 }
 
-extension Coordinator: DetailsCoordinator {
+extension Coordinator: DetailsCoordinator, LaunchDetailsCoordinator {
     func showFullscreenImage(with url: String) {
         guard let tabBarController = window.rootViewController as? UITabBarController,
               let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
@@ -66,4 +66,14 @@ extension Coordinator: DetailsCoordinator {
         navigationController.pushViewController(webViewController, animated: true)
     }
 
+    func showRocket(model: Rocket) {
+        guard let tabBarController = window.rootViewController as? UITabBarController,
+              let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
+        let rocketDetailsViewController =
+            RocketDetailsViewController(nibName: "RocketDetailsViewController", bundle: nil)
+        let rocketDetailsPresenter = RocketDetailsPresenter(service: service, model: model, coordinator: self)
+        rocketDetailsViewController.presenter = rocketDetailsPresenter
+        navigationController.pushViewController(rocketDetailsViewController, animated: true)
+    }
+    
 }
