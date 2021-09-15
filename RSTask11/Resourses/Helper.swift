@@ -34,4 +34,20 @@ extension String {
         printFormatter.dateFormat = "MMMM d, yyyy"
         return printFormatter.string(from: date)
     }
+    
+    static func compareExtendedDates(date1: String?, date2: String?) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'.000Z'"
+        guard let date1 = date1, let firstDate = dateFormatter.date(from: date1) else { return false }
+        guard let date2 = date2, let secondDate = dateFormatter.date(from: date2) else { return true }
+        return firstDate > secondDate
+    }
+    
+    static func compareDates(date1: String, date2: String) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let firstDate = dateFormatter.date(from: date1) else { return false }
+        guard let secondDate = dateFormatter.date(from: date2) else { return true }
+        return firstDate > secondDate
+    }
 }

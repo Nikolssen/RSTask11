@@ -18,6 +18,7 @@ protocol RocketListPresenterType {
     func viewDataForCell(at index: Int) -> RocketCellViewData
     func showDetailsForCell(at index: Int)
     func numberOfCells() -> Int
+    func sort(by options: Rocket.SortingOptions)
 }
 
 protocol RocketListPresenterDelegate: AnyObject {
@@ -34,6 +35,8 @@ class RocketListPresenter: RocketListPresenterType {
     let coordinator: RocketListPresenterCoordinator
     let service: ServiceType
     var rockets: [Rocket] = []
+    private var displayRockets: [Rocket] = []
+    var sortingOption: Rocket.SortingOptions?
     
     func viewWillBecomeActive() {
         
@@ -57,19 +60,60 @@ class RocketListPresenter: RocketListPresenterType {
     }
     
     func viewDataForCell(at index: Int) -> RocketCellViewData {
-        let rocket = rockets[index]
+        
+        let rocket = displayRockets.isEmpty ? rockets[index] : displayRockets[index]
         return RocketCellViewData(name: rocket.name ,firstLaunch: rocket.firstLaunch.toDateFormat,
-                                cost: "\(rocket.launchCost)$", success: "\(rocket.successRate)%", imageURL: rocket.images.first, imageCacher: service.imageCacher)
+                                  cost: "\(rocket.launchCost)$", success: "\(rocket.successRate)%", imageURL: rocket.images.first, imageCacher: service.imageCacher)
     }
     
     func showDetailsForCell(at index: Int) {
-        coordinator.showDetails(model: rockets[index])
+        let rocket = displayRockets.isEmpty ? rockets[index] : displayRockets[index]
+        coordinator.showDetails(model: rocket)
+        
     }
     
     func numberOfCells() -> Int {
         return rockets.count
     }
     
+    func sort(by options: Rocket.SortingOptions) {
+        var sortingClosure: ((Rocket, Rocket) -> Bool)? = nil
+        switch options {
+        case .launchCost:
+            if let sortingOption = sortingOption, options == sortingOption {
+                sortingClosure = {$0.launchCost < $1.launchCost}
+                self.sortingOption = nil
+            }
+            else {
+                sortingClosure = {$0.launchCost > $1.launchCost}
+                self.sortingOption = options
+            }
+            
+        case .firstLaunch:
+            if  let sortingOption = sortingOption, options == sortingOption {
+                sortingClosure = { !String.compareDates(date1: $0.firstLaunch, date2: $1.firstLaunch) }
+                self.sortingOption = nil
+            }
+            else {
+                sortingClosure = { String.compareDates(date1: $0.firstLaunch, date2: $1.firstLaunch) }
+                self.sortingOption = options
+            }
+           
+        case .success:
+            if  let sortingOption = sortingOption, options == sortingOption {
+                sortingClosure = { $0.successRate < $1.successRate }
+                self.sortingOption = nil
+            }
+            else {
+                sortingClosure = { $0.successRate > $1.successRate }
+                self.sortingOption = options
+            }
+        }
+        if let sortingClosure = sortingClosure {
+            self.displayRockets = rockets.sorted(by: sortingClosure)
+            delegate?.updateCollectionView()
+        }
+    }
     init(service: ServiceType, coordinator: RocketListPresenterCoordinator){
         self.service = service
         self.coordinator = coordinator

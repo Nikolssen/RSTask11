@@ -16,20 +16,20 @@ class ShadowedView: UIView {
     
     enum Style {
         case number(String)
-        case retired
-        case active
+        case status(String)
+        case empty
     }
     
     private let label: UILabel = UILabel()
     private let contentView: UIView = UIView()
     
-    var style: ShadowedView.Style = .active {
+    var style: ShadowedView.Style = .empty {
         willSet{
             switch newValue {
-            case .active:
-                label.text = "Active"
-            case .retired:
-                label.text = "Retired"
+            case .empty:
+                label.text = ""
+            case .status(let status):
+                label.text = status.capitalized
             case .number(let number):
                 label.text = "#" + number
             }

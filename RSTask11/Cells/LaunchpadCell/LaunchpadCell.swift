@@ -30,7 +30,7 @@ class LaunchpadCell: UICollectionViewCell {
     func configure(with viewData: LaunchpadCellViewData){
         nameLabel.text = viewData.name
         locationLabel.text = viewData.location
-        shadowedView.style = viewData.status == "retired" ? .retired : .active
+        shadowedView.style = .status(viewData.status)
     }
     
     override func prepareForReuse() {

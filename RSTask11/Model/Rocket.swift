@@ -113,7 +113,10 @@ struct Rocket {
 
 extension Rocket: Decodable {
     enum CodingKeys: String, CodingKey{
-        case height, diameter, mass, first_stage, second_stage, engines, landing_legs, flickr_images, name, active, cost_per_launch, success_rate_pct, first_flight, wikipedia, description, id
+        case height, diameter, mass
+        case firstStage = "first_stage", secondStage = "second_stage", engines
+        case landingLegs = "landing_legs", flickrImages = "flickr_images", name, active
+        case costPerLaunch = "cost_per_launch", successRate = "success_rate_pct", firstFlight = "first_flight", wikipedia, description, id
     }
     
     enum HeightCodingKeys: String, CodingKey{
@@ -139,16 +142,24 @@ extension Rocket: Decodable {
         self.mass = try massContainer.decode(Int.self, forKey: .kg)
         
         self.description = try container.decode(String.self, forKey: .description)
-        self.successRate = try container.decode(Int.self, forKey: .success_rate_pct)
-        self.firstStage = try container.decode(FirstStage.self, forKey: .first_stage)
-        self.secondStage = try container.decode(SecondStage.self, forKey: .second_stage)
-        self.firstLaunch = try container.decode(String.self, forKey: .first_flight)
-        self.landingLegs = try? container.decode(LandingLegs.self, forKey: .landing_legs)
+        self.successRate = try container.decode(Int.self, forKey: .successRate)
+        self.firstStage = try container.decode(FirstStage.self, forKey: .firstStage)
+        self.secondStage = try container.decode(SecondStage.self, forKey: .secondStage)
+        self.firstLaunch = try container.decode(String.self, forKey: .firstFlight)
+        self.landingLegs = try? container.decode(LandingLegs.self, forKey: .landingLegs)
         self.isActive = try container.decode(Bool.self, forKey: .active)
         self.engine = try container.decode(Engine.self, forKey: .engines)
         self.id = try container.decode(String.self, forKey: .id)
-        self.images = try container.decode([String].self, forKey: .flickr_images)
+        self.images = try container.decode([String].self, forKey: .flickrImages)
         self.wikipediaLink = try container.decode(String.self, forKey: .wikipedia)
-        self.launchCost = try container.decode(Int.self, forKey: .cost_per_launch)
+        self.launchCost = try container.decode(Int.self, forKey: .costPerLaunch)
+    }
+}
+
+extension Rocket {
+    enum SortingOptions{
+        case firstLaunch
+        case launchCost
+        case success
     }
 }

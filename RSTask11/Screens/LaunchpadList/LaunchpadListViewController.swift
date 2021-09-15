@@ -41,11 +41,38 @@ final class LaunchpadListViewController: UICollectionViewController {
         self.navigationItem.titleView = segmentedControl
     }
     @objc func showSortOptions(){
-        
+        let alertController = UIAlertController(title: "Choose your option", message: nil, preferredStyle: .actionSheet)
+        alertController.view.tintColor = .coral
+        let regionAlertAction = UIAlertAction(title: "Region", style: .default) { [presenter] _ in
+            presenter?.sort(by: .region)
+        }
+        let statusAlertAction = UIAlertAction(title: "Status", style: .default) { [presenter] _ in
+            presenter?.sort(by: .status)
+        }
+        let titleAlertAction = UIAlertAction(title: "Title", style: .default) { [presenter] _ in
+            presenter?.sort(by: .title)
+        }
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        cancelAlertAction.setValue(UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1), forKey: "titleTextColor")
+        alertController.addAction(regionAlertAction)
+        alertController.addAction(statusAlertAction)
+        alertController.addAction(titleAlertAction)
+        alertController.addAction(cancelAlertAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @objc func filter(sender: UISegmentedControl){
-        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            presenter.filter(by: .all)
+        case 1:
+            presenter.filter(by: .active)
+        case 2:
+            presenter.filter(by: .retired)
+        default:
+            break
+        }
+
     }
     // MARK: UICollectionViewDataSource
 

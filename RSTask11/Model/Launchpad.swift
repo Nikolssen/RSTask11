@@ -69,3 +69,15 @@ extension Launchpad: Decodable {
         self.init(images: images, name: name, fullName: fullName, region: region, latitude: latitude, longitude: longitude, locality: locality, launchAttempts: launchAttempts, launchSuccesses: launchSuccesses, rockets: rockets, launches: launches, status: status, details: details, id: id)
     }
 }
+extension Launchpad {
+    enum SortingOptions {
+        case title
+        case region
+        case status
+    }
+    enum FilterOptions {
+        case active
+        case retired
+        case all
+    }
+}

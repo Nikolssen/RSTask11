@@ -55,3 +55,16 @@ struct Launch: Decodable {
     let launchDate: String?
     let rocket: String?
 }
+
+extension Launch {
+    enum SortingOptions {
+        case launchDate
+        case title
+        case number
+    }
+    enum FilterOptions {
+        case past
+        case future
+        case all
+    }
+}

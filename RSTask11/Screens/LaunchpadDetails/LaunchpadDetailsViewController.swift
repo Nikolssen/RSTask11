@@ -31,7 +31,7 @@ class LaunchpadDetailsViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = presenter.title
         fullNameLabel.text = presenter.fullName
-        statusView.style = presenter.fullName == "active" ? .active : .retired
+        statusView.style = .status(presenter.status) 
         descriptionLabel.text = presenter.description
         regionLabel.text = presenter.region
         locationLabel.text = presenter.location
@@ -49,6 +49,7 @@ class LaunchpadDetailsViewController: UIViewController {
         let annotation = MKPointAnnotation()
         let coordinates = presenter.coordinates
         annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.0, longitude: coordinates.1)
+        annotation.title = presenter.fullName
         shadowedMapView.mapView.addAnnotation(annotation)
         shadowedMapView.mapView.setRegion(.init(center: annotation.coordinate, latitudinalMeters: 500000, longitudinalMeters: 500000), animated: false)
     }

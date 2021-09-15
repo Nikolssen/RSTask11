@@ -55,7 +55,24 @@ final class RocketListViewController: UICollectionViewController {
     }
     
     @objc func showSortOptions(){
-        
+        let alertController = UIAlertController(title: "Choose your option", message: nil, preferredStyle: .actionSheet)
+        alertController.view.tintColor = .coral
+        let launchDateAlertAction = UIAlertAction(title: "First launch", style: .default) { [presenter] _ in
+            presenter?.sort(by: .firstLaunch)
+        }
+        let launchCostAlertAction = UIAlertAction(title: "Launch cost", style: .default) { [presenter] _ in
+            presenter?.sort(by: .launchCost)
+        }
+        let successRateAlertAction = UIAlertAction(title: "Success rate", style: .default) { [presenter] _ in
+            presenter?.sort(by: .success)
+        }
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        cancelAlertAction.setValue(UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1), forKey: "titleTextColor")
+        alertController.addAction(launchDateAlertAction)
+        alertController.addAction(launchCostAlertAction)
+        alertController.addAction(successRateAlertAction)
+        alertController.addAction(cancelAlertAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 

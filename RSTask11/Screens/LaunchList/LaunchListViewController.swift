@@ -43,11 +43,37 @@ final class LaunchListViewController: UICollectionViewController {
         self.navigationItem.titleView = segmentedControl
     }
     @objc func showSortOptions(){
-        
+        let alertController = UIAlertController(title: "Choose your option", message: nil, preferredStyle: .actionSheet)
+        alertController.view.tintColor = .coral
+        let launchDateAlertAction = UIAlertAction(title: "Launch date", style: .default) { [presenter] _ in
+            presenter?.sort(by: .launchDate)
+        }
+        let titleAlertAction = UIAlertAction(title: "Title", style: .default) { [presenter] _ in
+            presenter?.sort(by: .title)
+        }
+        let numberAlertAction = UIAlertAction(title: "Number", style: .default) { [presenter] _ in
+            presenter?.sort(by: .number)
+        }
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        cancelAlertAction.setValue(UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1), forKey: "titleTextColor")
+        alertController.addAction(launchDateAlertAction)
+        alertController.addAction(titleAlertAction)
+        alertController.addAction(numberAlertAction)
+        alertController.addAction(cancelAlertAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @objc func filter(sender: UISegmentedControl){
-        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            presenter.filter(by: .all)
+        case 1:
+            presenter.filter(by: .past)
+        case 2:
+            presenter.filter(by: .future)
+        default:
+            break
+        }
     }
     // MARK: UICollectionViewDataSource
 
