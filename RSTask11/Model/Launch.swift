@@ -42,6 +42,7 @@ struct Launch: Decodable {
         case upcoming
         case staticFireDate = "static_fire_date_utc"
         case rocket
+        case id
     }
     let links: Links
     
@@ -54,6 +55,7 @@ struct Launch: Decodable {
     let staticFireDate: String?
     let launchDate: String?
     let rocket: String?
+    let id: String
 }
 
 extension Launch {

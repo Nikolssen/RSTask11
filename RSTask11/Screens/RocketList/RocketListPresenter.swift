@@ -37,25 +37,32 @@ class RocketListPresenter: RocketListPresenterType {
     var rockets: [Rocket] = []
     private var displayRockets: [Rocket] = []
     var sortingOption: Rocket.SortingOptions?
+    private let ids: [String]?
     
     func viewWillBecomeActive() {
-        
-        let completion: (Result<[Rocket], Error>) -> Void = {[weak self]
-            result in
-            DispatchQueue.main.async {
-                switch result {
-                case let .success(rockets):
-                    self?.rockets = rockets
-                    self?.delegate?.updateCollectionView()
-                    
-                case .failure(_):
-                    print("There is an error")
+        if rockets.isEmpty {
+            let completion: (Result<[Rocket], Error>) -> Void = {[weak self]
+                result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .success(rockets):
+                        if let ids = self?.ids{
+                            self?.rockets = rockets.filter({ids.contains($0.id)})
+                        }
+                        else {
+                            self?.rockets = rockets
+                        }
+                        
+                        self?.delegate?.updateCollectionView()
+                        
+                    case .failure(_):
+                        print("There is an error")
+                    }
                 }
             }
-        }
-        
-        DispatchQueue.global(qos: .utility).async {
-            self.service.networkService.get(request: .rockets, callback: completion)
+            DispatchQueue.global(qos: .utility).async {
+                self.service.networkService.get(request: .rockets, callback: completion)
+            }
         }
     }
     
@@ -114,9 +121,11 @@ class RocketListPresenter: RocketListPresenterType {
             delegate?.updateCollectionView()
         }
     }
-    init(service: ServiceType, coordinator: RocketListPresenterCoordinator){
+    init(service: ServiceType, coordinator: RocketListPresenterCoordinator, ids: [String]? = nil){
         self.service = service
         self.coordinator = coordinator
+        self.ids = ids
     }
+    
     
 }

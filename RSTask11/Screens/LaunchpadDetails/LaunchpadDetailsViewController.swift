@@ -25,8 +25,9 @@ class LaunchpadDetailsViewController: UIViewController {
     @IBOutlet var imagesCollectionView: UICollectionView!
     @IBOutlet var shadowedMapView: ShadowedMapView!
     @IBOutlet var rocketButton: ShadowedButton!
-    @IBOutlet var launchesLabel: ShadowedButton!
+    @IBOutlet var launchesButton: ShadowedButton!
     
+    @IBOutlet var materialsStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = presenter.title
@@ -47,6 +48,14 @@ class LaunchpadDetailsViewController: UIViewController {
             imagesStackView.isHidden = true
         }
         
+        if !presenter.areLaunchesAvaliable && !presenter.areRocketsAvailable {
+            materialsStackView.isHidden = true
+        }
+        else {
+            rocketButton.isHidden = !presenter.areRocketsAvailable
+            launchesButton.isHidden = !presenter.areLaunchesAvaliable
+        }
+        
         navigationItem.title = presenter.title
         
         let annotation = MKPointAnnotation()
@@ -64,6 +73,14 @@ class LaunchpadDetailsViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    @IBAction func showRockets(_ sender: Any) {
+        presenter.showRockets()
+    }
+    
+    @IBAction func showLaunches(_ sender: Any) {
+        presenter.showLaunches()
     }
 }
 

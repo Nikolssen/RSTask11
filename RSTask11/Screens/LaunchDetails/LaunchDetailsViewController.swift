@@ -119,13 +119,13 @@ class LaunchDetailsViewController: UIViewController {
         }
         
         let reddit = presenter.hasRedditLinks
-        if !reddit.0 && !reddit.1 && !reddit.2 && reddit.3 {
-            redditStackView.isHidden = false
+        if !reddit.0 && !reddit.1 && !reddit.2 && !reddit.3 {
+            redditStackView.isHidden = true
         }
         else {
             recoveryButton.isHidden = !reddit.0
             mediaButton.isHidden = !reddit.1
-            
+            campaignButton.isHidden = !reddit.2
             launchButton.isHidden = !reddit.3
         }
         navigationItem.title = presenter.title

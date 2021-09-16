@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2E8BBF26F3446800240305 /* RSTask11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BBE26F3446800240305 /* RSTask11Tests.swift */; };
+		3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC626F344B600240305 /* RocketTest.swift */; };
+		3F2E8BC926F3454700240305 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC826F3454700240305 /* Mocks.swift */; };
 		3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */; };
 		3F38F93A26F089F300A6D7A5 /* ImageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */; };
 		3F38F93C26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */; };
@@ -61,7 +64,22 @@
 		84E0563026EE2B4A00330A50 /* RocketDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E0562E26EE2B4A00330A50 /* RocketDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3F2E8BC126F3446800240305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F95D96626E883D500ECB3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F95D96D26E883D500ECB3D8;
+			remoteInfo = RSTask11;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3F2E8BBC26F3446800240305 /* RSTask11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSTask11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2E8BBE26F3446800240305 /* RSTask11Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTask11Tests.swift; sourceTree = "<group>"; };
+		3F2E8BC026F3446800240305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F2E8BC626F344B600240305 /* RocketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTest.swift; sourceTree = "<group>"; };
+		3F2E8BC826F3454700240305 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedMapView.swift; sourceTree = "<group>"; };
 		3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresenter.swift; sourceTree = "<group>"; };
 		3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -119,6 +137,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F2E8BB926F3446800240305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F95D96B26E883D500ECB3D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +154,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2E8BBD26F3446800240305 /* RSTask11Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3F2E8BC026F3446800240305 /* Info.plist */,
+				3F2E8BBE26F3446800240305 /* RSTask11Tests.swift */,
+				3F2E8BC626F344B600240305 /* RocketTest.swift */,
+				3F2E8BC826F3454700240305 /* Mocks.swift */,
+			);
+			path = RSTask11Tests;
+			sourceTree = "<group>";
+		};
 		3F38F93426F0825700A6D7A5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				3F95D97026E883D500ECB3D8 /* RSTask11 */,
+				3F2E8BBD26F3446800240305 /* RSTask11Tests */,
 				3F95D96F26E883D500ECB3D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -257,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				3F95D96E26E883D500ECB3D8 /* RSTask11.app */,
+				3F2E8BBC26F3446800240305 /* RSTask11Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,6 +430,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F2E8BBB26F3446800240305 /* RSTask11Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F2E8BC526F3446800240305 /* Build configuration list for PBXNativeTarget "RSTask11Tests" */;
+			buildPhases = (
+				3F2E8BB826F3446800240305 /* Sources */,
+				3F2E8BB926F3446800240305 /* Frameworks */,
+				3F2E8BBA26F3446800240305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F2E8BC226F3446800240305 /* PBXTargetDependency */,
+			);
+			name = RSTask11Tests;
+			productName = RSTask11Tests;
+			productReference = 3F2E8BBC26F3446800240305 /* RSTask11Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3F95D96D26E883D500ECB3D8 /* RSTask11 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F95D98226E883D600ECB3D8 /* Build configuration list for PBXNativeTarget "RSTask11" */;
@@ -418,6 +474,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					3F2E8BBB26F3446800240305 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3F95D96D26E883D500ECB3D8;
+					};
 					3F95D96D26E883D500ECB3D8 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -437,11 +497,19 @@
 			projectRoot = "";
 			targets = (
 				3F95D96D26E883D500ECB3D8 /* RSTask11 */,
+				3F2E8BBB26F3446800240305 /* RSTask11Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F2E8BBA26F3446800240305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F95D96C26E883D500ECB3D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +532,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F2E8BB826F3446800240305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2E8BBF26F3446800240305 /* RSTask11Tests.swift in Sources */,
+				3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */,
+				3F2E8BC926F3454700240305 /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F95D96A26E883D500ECB3D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -513,6 +591,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3F2E8BC226F3446800240305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F95D96D26E883D500ECB3D8 /* RSTask11 */;
+			targetProxy = 3F2E8BC126F3446800240305 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3F95D97C26E883D600ECB3D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -525,6 +611,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3F2E8BC326F3446800240305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6V47L895;
+				INFOPLIST_FILE = RSTask11Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.budovich.RSTask11Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSTask11.app/RSTask11";
+			};
+			name = Debug;
+		};
+		3F2E8BC426F3446800240305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G6V47L895;
+				INFOPLIST_FILE = RSTask11Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivan.budovich.RSTask11Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSTask11.app/RSTask11";
+			};
+			name = Release;
+		};
 		3F95D98026E883D600ECB3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -684,6 +810,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F2E8BC526F3446800240305 /* Build configuration list for PBXNativeTarget "RSTask11Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F2E8BC326F3446800240305 /* Debug */,
+				3F2E8BC426F3446800240305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F95D96926E883D500ECB3D8 /* Build configuration list for PBXProject "RSTask11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

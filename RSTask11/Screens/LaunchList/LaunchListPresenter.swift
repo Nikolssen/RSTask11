@@ -41,7 +41,7 @@ class LaunchListPresenter: LaunchListPresenterType {
     private var filterOption: Launch.FilterOptions = .all
     private var sortingOption: Launch.SortingOptions?
     private var sortDescending = true
-    
+    private var ids: [String]?
     func viewWillBecomeActive() {
         if launches.isEmpty {
             let completion: (Result<[Launch], Error>) -> Void = {[weak self]
@@ -49,7 +49,13 @@ class LaunchListPresenter: LaunchListPresenterType {
                 DispatchQueue.main.async {
                     switch result {
                     case let .success(launches):
-                        self?.launches = launches
+                        if let ids = self?.ids {
+                            self?.launches = launches.filter({ids.contains($0.id)})
+                        }
+                        else {
+                            self?.launches = launches
+                        }
+                        
                         self?.displayedLaunches = launches
                         self?.delegate?.updateCollectionView()
                         
@@ -161,9 +167,10 @@ class LaunchListPresenter: LaunchListPresenterType {
     }
     
     
-    init(service: ServiceType, coordinator: LaunchListPresenterCoordinator){
+    init(service: ServiceType, coordinator: LaunchListPresenterCoordinator, ids: [String]? = nil){
         self.service = service
         self.coordinator = coordinator
+        self.ids = ids
     }
     
 }

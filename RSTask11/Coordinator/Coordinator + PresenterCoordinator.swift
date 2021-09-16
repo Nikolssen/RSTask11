@@ -12,7 +12,7 @@ import UIKit
 extension Coordinator: RocketListPresenterCoordinator {
     func showDetails(model: Rocket) {
         guard let tabBarController = window.rootViewController as? UITabBarController,
-              let navigationController = tabBarController.viewControllers?[0] as? UINavigationController else { return }
+              let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
         let rocketDetailsViewController =
             RocketDetailsViewController(nibName: "RocketDetailsViewController", bundle: nil)
         let rocketDetailsPresenter = RocketDetailsPresenter(service: service, model: model, coordinator: self)
@@ -46,7 +46,7 @@ extension Coordinator: LaunchpadListPresenterCoordinator {
     }
 }
 
-extension Coordinator: DetailsCoordinator, LaunchDetailsCoordinator {
+extension Coordinator: DetailsCoordinator {
     func showFullscreenImage(with url: String) {
         guard let tabBarController = window.rootViewController as? UITabBarController,
               let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
@@ -66,6 +66,12 @@ extension Coordinator: DetailsCoordinator, LaunchDetailsCoordinator {
         navigationController.pushViewController(webViewController, animated: true)
     }
 
+
+    
+}
+
+extension Coordinator:  LaunchDetailsCoordinator {
+    
     func showRocket(model: Rocket) {
         guard let tabBarController = window.rootViewController as? UITabBarController,
               let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
@@ -74,6 +80,30 @@ extension Coordinator: DetailsCoordinator, LaunchDetailsCoordinator {
         let rocketDetailsPresenter = RocketDetailsPresenter(service: service, model: model, coordinator: self)
         rocketDetailsViewController.presenter = rocketDetailsPresenter
         navigationController.pushViewController(rocketDetailsViewController, animated: true)
+    }
+    
+
+}
+
+extension Coordinator: LaunchpadDetailsCoordinator {
+    func showRockets(with ids: [String]) {
+        guard let tabBarController = window.rootViewController as? UITabBarController,
+              let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
+        let rocketListViewController = RocketListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let rocketListPresenter = RocketListPresenter(service: service, coordinator: self, ids: ids)
+        rocketListPresenter.delegate = rocketListViewController
+        rocketListViewController.presenter = rocketListPresenter
+        navigationController.pushViewController(rocketListViewController, animated: true)
+    }
+    
+    func showLaunches(with ids: [String]) {
+        guard let tabBarController = window.rootViewController as? UITabBarController,
+              let navigationController = tabBarController.selectedViewController as? UINavigationController else { return }
+        let launchListViewController = LaunchListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let launchListPresenter = LaunchListPresenter(service: service, coordinator: self, ids: ids)
+        launchListPresenter.delegate = launchListViewController
+        launchListViewController.presenter = launchListPresenter
+        navigationController.pushViewController(launchListViewController, animated: true)
     }
     
 }

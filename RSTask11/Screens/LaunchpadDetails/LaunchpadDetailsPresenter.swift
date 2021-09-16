@@ -25,14 +25,34 @@ protocol LaunchpadDetailsPresenterType {
     var areLaunchesAvaliable: Bool {get}
     func imageSelected(at index: Int)
     func loadImageForCell(at index: Int, callback: @escaping (UIImage) -> Void)
+    func showLaunches()
+    func showRockets()
+}
+
+protocol LaunchpadDetailsCoordinator: DetailsCoordinator {
+    func showRockets(with ids: [String])
+    
+    func showLaunches(with ids: [String])
 }
 
 class LaunchpadDetailsPresenter: LaunchpadDetailsPresenterType{
+    func showLaunches() {
+        if !launchpad.launches.isEmpty {
+            coordinator.showLaunches(with: launchpad.launches)
+        }
+    }
+    
+    func showRockets() {
+        if !launchpad.rockets.isEmpty {
+            coordinator.showRockets(with: launchpad.rockets)
+        }
+    }
+    
     
     
     let launchpad: Launchpad
     let service: ServiceType
-    let coordinator: DetailsCoordinator
+    let coordinator: LaunchpadDetailsCoordinator
     
     var title: String {
         launchpad.name
@@ -89,7 +109,7 @@ class LaunchpadDetailsPresenter: LaunchpadDetailsPresenterType{
         coordinator.showFullscreenImage(with: launchpad.images[index])
     }
     
-    init(service: ServiceType, coordinator: DetailsCoordinator, model: Launchpad) {
+    init(service: ServiceType, coordinator: LaunchpadDetailsCoordinator, model: Launchpad) {
         self.service = service
         self.coordinator = coordinator
         self.launchpad = model
