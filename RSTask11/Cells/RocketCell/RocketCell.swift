@@ -16,10 +16,14 @@ class RocketCell: UICollectionViewCell {
     @IBOutlet var successRateLabel: UILabel!
     @IBOutlet var stackView: UIStackView!
     
+    let imageViewMask = CAShapeLayer()
+    
     enum Constants {
         static let widthToHeightRatio: CGFloat = 377.0 / 360
         static let reuseIdentifier: String = "RocketCellID"
+        static let nib: UINib = UINib(nibName: "RocketCell", bundle: nil)
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
@@ -27,6 +31,9 @@ class RocketCell: UICollectionViewCell {
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.cornerRadius = 15.0
+        imageViewMask.path = UIBezierPath(roundedRect: imageView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 15, height: 15)).cgPath
+        imageView.layer.mask = imageViewMask
+        layer.masksToBounds = false
     }
     
     func configure(with viewData: RocketCellViewData) {
@@ -41,5 +48,9 @@ class RocketCell: UICollectionViewCell {
         super.prepareForReuse()
         stackView.isHidden = false
     }
-    
+ 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageViewMask.path = UIBezierPath(roundedRect: imageView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 15, height: 15)).cgPath
+    }
 }

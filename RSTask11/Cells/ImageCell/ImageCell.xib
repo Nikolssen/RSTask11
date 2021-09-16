@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yry-v9-Xja">
-                        <rect key="frame" x="0.0" y="44" width="208" height="296"/>
+                        <rect key="frame" x="3" y="47" width="202" height="290"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="yry-v9-Xja" secondAttribute="bottom" id="NlC-7X-tEe"/>
-                <constraint firstItem="yry-v9-Xja" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="U3I-uU-yD2"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yry-v9-Xja" secondAttribute="trailing" id="lBa-Vi-glf"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="yry-v9-Xja" secondAttribute="top" id="pEq-Ts-h4q"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="yry-v9-Xja" secondAttribute="bottom" constant="3" id="NlC-7X-tEe"/>
+                <constraint firstItem="yry-v9-Xja" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="3" id="U3I-uU-yD2"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="yry-v9-Xja" secondAttribute="trailing" constant="3" id="lBa-Vi-glf"/>
+                <constraint firstItem="yry-v9-Xja" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="3" id="pEq-Ts-h4q"/>
             </constraints>
             <size key="customSize" width="208" height="340"/>
             <connections>

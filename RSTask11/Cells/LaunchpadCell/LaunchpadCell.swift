@@ -12,6 +12,7 @@ class LaunchpadCell: UICollectionViewCell {
     enum Constants {
         static let widthToHeightRatio: CGFloat = 377.0 / 140.0
         static let reuseIdentifier: String = "LaunchpadCellID"
+        static let nib: UINib = UINib(nibName: "LaunchpadCell", bundle: nil)
     }
     
     @IBOutlet private var nameLabel: UILabel!
@@ -25,6 +26,7 @@ class LaunchpadCell: UICollectionViewCell {
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.cornerRadius = 15.0
+        layer.masksToBounds = false
     }
 
     func configure(with viewData: LaunchpadCellViewData){

@@ -18,7 +18,7 @@ final class RocketListViewController: UICollectionViewController {
         super.viewDidLoad()
         view.backgroundColor = .queenBlue
         collectionView.backgroundColor = .queenBlue
-        self.collectionView.register(UINib(nibName: "RocketCell", bundle: nil), forCellWithReuseIdentifier: RocketCell.Constants.reuseIdentifier)
+        self.collectionView.register(RocketCell.Constants.nib, forCellWithReuseIdentifier: RocketCell.Constants.reuseIdentifier)
         configureNavigationBar()
     }
     

@@ -41,7 +41,7 @@ class LaunchpadDetailsViewController: UIViewController {
         if presenter.numberOfImages > 0 {
             imagesCollectionView.delegate = self
             imagesCollectionView.dataSource = self
-            imagesCollectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
+            imagesCollectionView.register(ImageCell.Constants.nib, forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
         }
         else {
             imagesStackView.isHidden = true
@@ -84,6 +84,9 @@ extension LaunchpadDetailsViewController: UICollectionViewDelegate, UICollection
         return CGSize(width: 145, height: 195)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter.imageSelected(at: indexPath.item)
     }

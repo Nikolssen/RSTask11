@@ -10,6 +10,7 @@ import UIKit
 class ImageCell: UICollectionViewCell {
     enum Constants{
         static let reuseIdentifier: String = "ImageID"
+        static let nib: UINib = UINib(nibName: "ImageCell", bundle: nil)
     }
     @IBOutlet var imageView: UIImageView!
     let layer1 = CALayer()
@@ -19,15 +20,18 @@ class ImageCell: UICollectionViewCell {
         layer.shadowRadius = 1.5
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowColor = UIColor.smockyBlack.cgColor
+        layer.shadowColor = UIColor.shadow.cgColor
         layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 3
-        layer1.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        layer.masksToBounds = false
+        layer1.shadowColor = UIColor.white.cgColor
         layer1.cornerRadius = 10
         layer1.opacity = 1.0
         layer1.shadowRadius = 1.5
+        layer1.masksToBounds = false
+        layer1.needsDisplayOnBoundsChange = true
         layer1.shadowOffset = CGSize(width: -2, height: -1)
-        layer.insertSublayer(layer1, at: 0)
+        layer.insertSublayer(layer1, at: 1)
         imageView.layer.cornerRadius = 7
     }
     

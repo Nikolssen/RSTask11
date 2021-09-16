@@ -65,7 +65,7 @@ class ShadowedView: UIView {
             widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 1.0, constant: Constants.horizontalOffset * 2)
         ])
         backgroundColor = .clear
-        layer.shadowColor = UIColor(red: 0.682, green: 0.682, blue: 0.753, alpha: 0.4).cgColor
+        layer.shadowColor = UIColor.shadow.cgColor
         layer.shadowOpacity = 1
         layer.shadowRadius = 1.5
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
@@ -77,7 +77,7 @@ class ShadowedView: UIView {
         let layer1 = contentView.layer
         layer1.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
         layer1.shadowOpacity = 1
-        layer1.shadowRadius = 2
+        layer1.shadowRadius = 1.5
         layer1.shadowOffset = CGSize(width: -1, height: -1)
         layer1.needsDisplayOnBoundsChange = true
         layer1.masksToBounds = false

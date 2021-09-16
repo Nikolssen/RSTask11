@@ -17,7 +17,7 @@ final class LaunchListViewController: UICollectionViewController {
         super.viewDidLoad()
         view.backgroundColor = .queenBlue
         collectionView.backgroundColor = .queenBlue
-        self.collectionView.register(UINib(nibName: "LaunchCell", bundle: nil), forCellWithReuseIdentifier: LaunchCell.Constants.reuseIdentifier)
+        self.collectionView.register(LaunchCell.Constants.nib, forCellWithReuseIdentifier: LaunchCell.Constants.reuseIdentifier)
         configureNavigationBar()
     }
     

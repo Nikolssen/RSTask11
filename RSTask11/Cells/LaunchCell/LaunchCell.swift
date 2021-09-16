@@ -18,6 +18,7 @@ class LaunchCell: UICollectionViewCell {
     enum Constants{
         static let widthToHeightRatio: CGFloat = 377.0 / 145.0
         static let reuseIdentifier: String = "LaunchCellID"
+        static let nib: UINib = UINib(nibName: "LaunchCell", bundle: nil)
     }
     
     override func awakeFromNib() {
@@ -27,6 +28,7 @@ class LaunchCell: UICollectionViewCell {
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 1.0
         layer.cornerRadius = 15.0
+        layer.masksToBounds = false
     }
     
     func configure(with viewData: LaunchCellViewData) {

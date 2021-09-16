@@ -92,7 +92,7 @@ class LaunchDetailsViewController: UIViewController {
         }
         
         if presenter.numberOfImages > 0 {
-            imagesCollectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
+            imagesCollectionView.register(ImageCell.Constants.nib, forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
             imagesCollectionView.delegate = self
             imagesCollectionView.dataSource = self
         }
@@ -103,7 +103,7 @@ class LaunchDetailsViewController: UIViewController {
         if presenter.hasRocket {
             rocketCollectionView.delegate = self
             rocketCollectionView.dataSource = self
-            rocketCollectionView.register(UINib(nibName: "RocketCell", bundle: nil), forCellWithReuseIdentifier: RocketCell.Constants.reuseIdentifier)
+            rocketCollectionView.register(RocketCell.Constants.nib, forCellWithReuseIdentifier: RocketCell.Constants.reuseIdentifier)
         }
         else {
             rocketStackView.isHidden = true
@@ -225,6 +225,9 @@ extension LaunchDetailsViewController: UICollectionViewDelegate, UICollectionVie
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         30
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 10, left: 3, bottom: 10, right: 7)
     }
 }
 

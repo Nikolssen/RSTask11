@@ -41,6 +41,10 @@ extension UIColor{
         UIColor(named: "Cyan Process")!
     }
     
+    static var shadow: UIColor {
+        UIColor(named: "Shadow")!
+    }
+    
 }
 
 extension UIImage {

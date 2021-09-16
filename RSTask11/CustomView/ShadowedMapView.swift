@@ -58,10 +58,10 @@ class ShadowedMapView: UIView {
         
         layer.insertSublayer(whiteShadow, at: 0)
         
-        layer.shadowColor = UIColor.smockyBlack.cgColor
+        layer.shadowColor = UIColor.shadow.cgColor
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
         layer.shadowOpacity = 0.4
-        layer.shadowRadius = 3
+        layer.shadowRadius = 1.5
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
     }
     override func layoutSubviews() {

@@ -60,10 +60,10 @@ class  ShadowedButton: UIButton {
         
         layer.insertSublayer(whiteShadow, at: 0)
         
-        layer.shadowColor = UIColor.smockyBlack.cgColor
+        layer.shadowColor = UIColor.shadow.cgColor
         layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowOpacity = 0.4
-        layer.shadowRadius = 3
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 1.5
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 16).cgPath
     }
     
@@ -87,11 +87,11 @@ class  ShadowedButton: UIButton {
             if newValue {
                 tintColor = .champagne
                 imageView?.tintColor = .champagne
-                layer.shadowColor = UIColor.clear.cgColor
+                layer.shadowOpacity = 0.0
             } else {
                 tintColor = .coral
                 imageView?.tintColor = .coral
-                layer.shadowColor = UIColor.smockyBlack.cgColor
+                layer.shadowOpacity = 1.0
             }
         }
     }

@@ -134,7 +134,7 @@ class RocketDetailsViewController: UIViewController {
         if presenter.numberOfImages > 0 {
             imageCollectionView.delegate = self
             imageCollectionView.dataSource = self
-            imageCollectionView.register(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
+            imageCollectionView.register(ImageCell.Constants.nib, forCellWithReuseIdentifier: ImageCell.Constants.reuseIdentifier)
         }
         else {
             imageStackView.isHidden = true
@@ -193,6 +193,9 @@ extension RocketDetailsViewController: UICollectionViewDelegate, UICollectionVie
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         30
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
 }

@@ -75,7 +75,7 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="csI-vs-e1k">
-                            <rect key="frame" x="20" y="387" width="355" height="1544"/>
+                            <rect key="frame" x="20" y="387" width="355" height="1564"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wdP-F2-4BI">
                                     <rect key="frame" x="0.0" y="0.0" width="355" height="65"/>
@@ -193,7 +193,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-cs-MG1">
-                                    <rect key="frame" x="0.0" y="347.5" width="355" height="243.5"/>
+                                    <rect key="frame" x="0.0" y="347.5" width="355" height="263.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-tf-ffo">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28.5"/>
@@ -202,10 +202,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6OB-j0-qN5">
-                                            <rect key="frame" x="0.0" y="48.5" width="355" height="195"/>
+                                            <rect key="frame" x="0.0" y="48.5" width="355" height="215"/>
                                             <color key="backgroundColor" name="Super White"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="195" id="nTr-L0-Qd2"/>
+                                                <constraint firstAttribute="height" constant="215" id="nTr-L0-Qd2"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VXe-wD-9wi">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -217,7 +217,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sfK-Kt-1sy">
-                                    <rect key="frame" x="0.0" y="621" width="355" height="222.5"/>
+                                    <rect key="frame" x="0.0" y="641" width="355" height="222.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQQ-kV-RN5">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28.5"/>
@@ -320,7 +320,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R0v-2A-ARM">
-                                    <rect key="frame" x="0.0" y="873.5" width="355" height="222.5"/>
+                                    <rect key="frame" x="0.0" y="893.5" width="355" height="222.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUz-Do-9kO">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28.5"/>
@@ -418,7 +418,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-CZ-Ixh">
-                                    <rect key="frame" x="0.0" y="1126" width="355" height="191"/>
+                                    <rect key="frame" x="0.0" y="1146" width="355" height="191"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second stage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaR-C4-iZ1">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28.5"/>
@@ -504,7 +504,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9jf-UQ-xio">
-                                    <rect key="frame" x="0.0" y="1347" width="355" height="96.5"/>
+                                    <rect key="frame" x="0.0" y="1367" width="355" height="96.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landing legs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGF-Ow-Wia">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="28.5"/>
@@ -554,7 +554,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-UA-cjs">
-                                    <rect key="frame" x="0.0" y="1473.5" width="355" height="70.5"/>
+                                    <rect key="frame" x="0.0" y="1493.5" width="355" height="70.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABd-PB-Pot">
                                             <rect key="frame" x="0.0" y="0.0" width="101" height="28.5"/>
@@ -638,7 +638,7 @@
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Super White">
-            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
