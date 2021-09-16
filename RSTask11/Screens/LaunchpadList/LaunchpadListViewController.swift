@@ -10,6 +10,7 @@ import UIKit
 final class LaunchpadListViewController: UICollectionViewController {
 
     var presenter: LaunchpadListPresenterType!
+    var selectedCellIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,12 @@ final class LaunchpadListViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         presenter?.viewWillBecomeActive()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedCellIndexPath = nil
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView.reloadData()
@@ -92,7 +99,15 @@ final class LaunchpadListViewController: UICollectionViewController {
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCellIndexPath = indexPath
         presenter.showDetailsForCell(at: indexPath.item)
+    }
+    
+    var selectedCell: UICollectionViewCell? {
+        if let indexPath = selectedCellIndexPath {
+            return collectionView.cellForItem(at: indexPath)
+        }
+        return nil
     }
 }
 

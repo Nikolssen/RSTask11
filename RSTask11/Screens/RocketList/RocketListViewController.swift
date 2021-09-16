@@ -12,7 +12,7 @@ final class RocketListViewController: UICollectionViewController {
 
     var presenter: RocketListPresenterType!
     
-    private var selectedIndexPath: IndexPath?
+    private var selectedCellIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ final class RocketListViewController: UICollectionViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        selectedIndexPath = nil
+        selectedCellIndexPath = nil
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -56,7 +56,7 @@ final class RocketListViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedIndexPath = indexPath
+        selectedCellIndexPath = indexPath
         presenter.showDetailsForCell(at: indexPath.item)
     }
     func configureNavigationBar(){
@@ -84,12 +84,14 @@ final class RocketListViewController: UICollectionViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func selectedCell() -> UICollectionViewCell? {
-        if let indexPath = self.selectedIndexPath {
+    
+    var selectedCell: UICollectionViewCell? {
+        if let indexPath = selectedCellIndexPath {
             return collectionView.cellForItem(at: indexPath)
         }
         return nil
     }
+
 }
 
 extension RocketListViewController{

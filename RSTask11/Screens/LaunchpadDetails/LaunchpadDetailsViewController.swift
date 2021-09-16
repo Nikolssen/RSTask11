@@ -26,6 +26,7 @@ class LaunchpadDetailsViewController: UIViewController {
     @IBOutlet var shadowedMapView: ShadowedMapView!
     @IBOutlet var rocketButton: ShadowedButton!
     @IBOutlet var launchesButton: ShadowedButton!
+    @IBOutlet var stackView: UIStackView!
     
     @IBOutlet var materialsStackView: UIStackView!
     override func viewDidLoad() {

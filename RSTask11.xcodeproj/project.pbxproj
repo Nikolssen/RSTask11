@@ -10,6 +10,7 @@
 		3F2E8BBF26F3446800240305 /* RSTask11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BBE26F3446800240305 /* RSTask11Tests.swift */; };
 		3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC626F344B600240305 /* RocketTest.swift */; };
 		3F2E8BC926F3454700240305 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC826F3454700240305 /* Mocks.swift */; };
+		3F2E8BCB26F35DBC00240305 /* RocketDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */; };
 		3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */; };
 		3F38F93A26F089F300A6D7A5 /* ImageViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */; };
 		3F38F93C26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */; };
@@ -80,6 +81,7 @@
 		3F2E8BC026F3446800240305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F2E8BC626F344B600240305 /* RocketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTest.swift; sourceTree = "<group>"; };
 		3F2E8BC826F3454700240305 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailsTest.swift; sourceTree = "<group>"; };
 		3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedMapView.swift; sourceTree = "<group>"; };
 		3F38F93926F089F300A6D7A5 /* ImageViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPresenter.swift; sourceTree = "<group>"; };
 		3F38F93B26F0C1F300A6D7A5 /* LaunchpadDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				3F2E8BBE26F3446800240305 /* RSTask11Tests.swift */,
 				3F2E8BC626F344B600240305 /* RocketTest.swift */,
 				3F2E8BC826F3454700240305 /* Mocks.swift */,
+				3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */,
 			);
 			path = RSTask11Tests;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2E8BCB26F35DBC00240305 /* RocketDetailsTest.swift in Sources */,
 				3F2E8BBF26F3446800240305 /* RSTask11Tests.swift in Sources */,
 				3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */,
 				3F2E8BC926F3454700240305 /* Mocks.swift in Sources */,

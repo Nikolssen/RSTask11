@@ -12,7 +12,7 @@ class Coordinator {
 
     let window: UIWindow
     let service: ServiceType = Service()
-    var delegates: [Any] = []
+    var transitionDelegate: UINavigationControllerDelegate = NavigationControllerDelegate()
     func start() {
         self.window.rootViewController = tabBarController
     }
@@ -41,9 +41,8 @@ class Coordinator {
         navigationController.tabBarItem.image = .rocket
         navigationController.tabBarItem.selectedImage = .rocket
         navigationController.tabBarItem.title = Strings.TabBar.rocket
-        let delegate = RocketsNavigationControllerDelegate()
-        navigationController.delegate = delegate
-        delegates.append(delegate)
+        navigationController.delegate = transitionDelegate
+
         return navigationController
     }
 
@@ -56,6 +55,7 @@ class Coordinator {
         navigationController.tabBarItem.image = .adjustment
         navigationController.tabBarItem.selectedImage = .adjustment
         navigationController.tabBarItem.title = Strings.TabBar.launch
+        navigationController.delegate = transitionDelegate
         return navigationController
     }
 
@@ -69,6 +69,7 @@ class Coordinator {
         navigationController.tabBarItem.image = .lego
         navigationController.tabBarItem.selectedImage = .lego
         navigationController.tabBarItem.title = Strings.TabBar.launchpad
+        navigationController.delegate = transitionDelegate
         return navigationController
     }
 }

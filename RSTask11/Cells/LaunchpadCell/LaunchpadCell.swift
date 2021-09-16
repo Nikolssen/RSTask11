@@ -15,8 +15,8 @@ class LaunchpadCell: UICollectionViewCell {
         static let nib: UINib = UINib(nibName: "LaunchpadCell", bundle: nil)
     }
     
-    @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var locationLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     @IBOutlet var shadowedView: ShadowedView!
     
     override func awakeFromNib() {
