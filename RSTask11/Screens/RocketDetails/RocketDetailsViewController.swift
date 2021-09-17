@@ -65,6 +65,7 @@ class RocketDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         titleLabel.text = presenter.title
         descriptionLabel.text = presenter.description
         firstLaunchLabel.text = presenter.firstLaunch

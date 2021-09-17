@@ -18,9 +18,15 @@ class LaunchpadCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var shadowedView: ShadowedView!
+    @IBOutlet var titleLabelTopAnchor: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        if UIDevice.isSEorTouch {
+            titleLabelTopAnchor.constant = 10
+            nameLabel.font = .robotoBold20
+        }
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         layer.shadowRadius = 3.0

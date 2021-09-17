@@ -14,6 +14,8 @@ class LaunchCell: UICollectionViewCell {
     @IBOutlet var indicatorView: IndicatorView!
     @IBOutlet var shadowedView: ShadowedView!
     @IBOutlet var shadowedImageView: ShadowedImageView!
+    @IBOutlet var labelTopAnchor: NSLayoutConstraint!
+    @IBOutlet var indicatorsBottomAnchor: NSLayoutConstraint!
     
     enum Constants{
         static let widthToHeightRatio: CGFloat = 377.0 / 145.0
@@ -23,6 +25,15 @@ class LaunchCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        if UIDevice.is678 {
+            labelTopAnchor.constant = 20
+            indicatorsBottomAnchor.constant = 12
+        }
+        if UIDevice.isSEorTouch {
+            labelTopAnchor.constant = 10
+            titleLabel.font = .robotoBold20
+            indicatorsBottomAnchor.constant = 5
+        }
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         layer.shadowRadius = 3.0

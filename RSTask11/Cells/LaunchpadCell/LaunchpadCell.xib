@@ -62,6 +62,7 @@
                 <outlet property="locationLabel" destination="Dvj-Yj-OTQ" id="Gzd-ae-Ney"/>
                 <outlet property="nameLabel" destination="JoG-67-kqP" id="Oou-rd-iqB"/>
                 <outlet property="shadowedView" destination="1IS-hJ-bcJ" id="dp6-4x-B4O"/>
+                <outlet property="titleLabelTopAnchor" destination="l4l-QI-xuC" id="W14-c7-WK0"/>
             </connections>
             <point key="canvasLocation" x="361.59420289855075" y="111.83035714285714"/>
         </collectionViewCell>

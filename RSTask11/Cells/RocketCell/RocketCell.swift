@@ -15,6 +15,7 @@ class RocketCell: UICollectionViewCell {
     @IBOutlet var launchCostLabel: UILabel!
     @IBOutlet var successRateLabel: UILabel!
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var stackViewLeadingAnchor: NSLayoutConstraint!
     
     let imageViewMask = CAShapeLayer()
     
@@ -26,6 +27,11 @@ class RocketCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if UIDevice.isSEorTouch {
+            stackView.spacing = 10
+            stackViewLeadingAnchor.constant = 10
+        }
         layer.shadowColor = UIColor.black.withAlphaComponent(0.37).cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         layer.shadowRadius = 3.0

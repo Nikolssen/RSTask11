@@ -164,7 +164,8 @@ class LaunchpadNavigationTransitioning: NSObject, UIViewControllerAnimatedTransi
         animator.addCompletion{position in
             toViewController.view.isHidden = false
             contentView.removeFromSuperview()
-            UIView.animate(withDuration: 0.15, delay: 0, options: [.transitionCurlDown], animations: {toViewController.stackView.alpha = 1.0}, completion: {_ in transitionContext.completeTransition(true)})
+            transitionContext.completeTransition(true)
+            UIView.animate(withDuration: 0.15, delay: 0, options: [.transitionCurlDown], animations: {toViewController.stackView.alpha = 1.0}, completion: nil)
         }
         
         animator.startAnimation()

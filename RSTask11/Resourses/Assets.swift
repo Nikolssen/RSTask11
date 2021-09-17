@@ -108,6 +108,18 @@ extension UIFont {
         UIFont(name: "Roboto-Bold", size: 24)!
     }
     
+    static var robotoBold20: UIFont {
+        UIFont(name: "Roboto-Bold", size: 20)!
+    }
+    
+    static var robotoBold18: UIFont {
+        UIFont(name: "Roboto-Bold", size: 18)!
+    }
+    
+    static var robotoBold16: UIFont {
+        UIFont(name: "Roboto-Bold", size: 16)!
+    }
+    
     static var robotoBold48: UIFont {
         UIFont(name: "Roboto-Bold", size: 48)!
     }

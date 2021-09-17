@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Strings {
     enum TabBar {
@@ -49,5 +50,15 @@ extension String {
         guard let firstDate = dateFormatter.date(from: date1) else { return false }
         guard let secondDate = dateFormatter.date(from: date2) else { return true }
         return firstDate > secondDate
+    }
+}
+
+extension UIDevice {
+    static var isSEorTouch: Bool{
+        return UIScreen.main.bounds.height <= 568
+    }
+    
+    static var is678: Bool {
+        return UIScreen.main.bounds.height <= 667
     }
 }
