@@ -19,7 +19,7 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         return nil
     }
 }
-//
+
 //class RocketNavigationTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
 //    private let duration: TimeInterval = 0.24
 //
@@ -63,26 +63,12 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
 //        toViewController.view.isHidden = true
 //        containerView.backgroundColor = nil
 //
-//
-//
-//        UIView.transition(with: containerView, duration: duration, options: .curveEaseInOut, animations: {
-//
-//
-//        }, completion: { position in
-//            toViewController.view.isHidden = false
-//            titleLabel.removeFromSuperview()
-//            snapshotImageView.removeFromSuperview()
-//            contentView.removeFromSuperview()
-//            transitionContext.completeTransition(position)
-//        })
-//
-//
 //        let animator = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
 //
 //            contentView.frame = containerView.convert(toViewController.view.frame, from: toViewController.view)
-//            snapshotImageView.frame = containerView.convert(toViewController.imageView.frame, from: toViewController.view)
-//            titleLabel.frame = containerView.convert(toViewController.titleLabel.frame, from: toViewController.view)
-//            titleLabel.textColor = .darkGray
+//            snapshotImageView.frame = contentView.convert(toViewController.imageView.frame, from: toViewController.view)
+//            titleLabel.frame = toViewController.titleLabel.frame
+//            titleLabel.textColor = .superWhite
 //            titleLabel.font = toViewController.titleLabel.font
 //        }
 //        animator.addCompletion{position in

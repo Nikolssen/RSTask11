@@ -10,9 +10,23 @@ import XCTest
 
 class RocketDetailsTest: XCTestCase {
 
-
-    func testCoordinator() throws {
-      //  let presenter = RocketDetailsPresenter(service: <#T##ServiceType#>, model: <#T##Rocket#>, coordinator: <#T##DetailsCoordinator#>)
+    var presenter: RocketDetailsPresenter?
+    var coordinator: DetailsCoordinatorMock = DetailsCoordinatorMock()
+    var imageCacher: ImageCacherType = ImageCacherMock()
+    
+    override func setUp() {
+        presenter = RocketDetailsPresenter(service: ServiceMock(networkService: NetworkServiceMock(), imageCacher: ImageCacherMock()), model: RocketTest.rocket, coordinator: coordinator)
     }
+
+    func testWikipedia() throws {
+        guard let presenter = presenter else {
+            return
+        }
+        presenter.showWikipediaPage()
+        XCTAssertTrue(self.coordinator.didOpenWebLink)
+        
+    }
+    
+    
 
 }
