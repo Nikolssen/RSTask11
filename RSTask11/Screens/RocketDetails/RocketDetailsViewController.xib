@@ -53,6 +53,7 @@
                 <outlet property="secondStageEnginesAmountLabel" destination="6Ts-0K-iZs" id="WU5-PS-Btt"/>
                 <outlet property="secondStageFuelAmouneLabel" destination="eNQ-mw-XKE" id="oP4-sl-q7W"/>
                 <outlet property="secondStageReusableLabel" destination="3KI-T9-HTD" id="j6d-UM-pvt"/>
+                <outlet property="stackView" destination="csI-vs-e1k" id="mSB-R9-C29"/>
                 <outlet property="successRateLabel" destination="GU8-Jd-s0Q" id="kWj-ib-6YD"/>
                 <outlet property="thrustLabel" destination="OZ5-0r-ay7" id="cwB-74-Qwh"/>
                 <outlet property="titleLabel" destination="jVr-A1-tis" id="R64-mx-oHL"/>

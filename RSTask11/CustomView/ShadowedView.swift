@@ -35,26 +35,25 @@ class ShadowedView: UIView {
             }
         }
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        label.frame = bounds.insetBy(dx: Constants.horizontalOffset, dy: Constants.verticalOffset)
+        contentView.frame = bounds
+        layer.cornerRadius = frame.height / 2
+        contentView.layer.cornerRadius = frame.height / 2
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
     }
     
-
-    
-    func commonInit(){
-        contentView.addSubview(label)
-        addSubview(contentView)
+    override  func awakeFromNib() {
+        super.awakeFromNib()
+        commonInit()
         label.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .cyanProcess
-        label.font = .robotoMedium17
-        
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.topAnchor.constraint(equalTo: topAnchor),
@@ -63,7 +62,19 @@ class ShadowedView: UIView {
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.horizontalOffset),
             label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.verticalOffset),
             widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 1.0, constant: Constants.horizontalOffset * 2)
+
         ])
+    }
+
+    
+    func commonInit(){
+        contentView.addSubview(label)
+        addSubview(contentView)
+
+        label.textColor = .cyanProcess
+        label.font = .robotoMedium17
+        
+
         backgroundColor = .clear
         layer.shadowColor = UIColor.shadow.cgColor
         layer.shadowOpacity = 1

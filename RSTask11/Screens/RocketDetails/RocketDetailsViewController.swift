@@ -52,6 +52,7 @@ class RocketDetailsViewController: UIViewController {
     @IBOutlet var scrollViewTopConstraint: NSLayoutConstraint!
     @IBOutlet var backButtonTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet var stackView: UIStackView!
     let gradientLayer: CAGradientLayer = {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
