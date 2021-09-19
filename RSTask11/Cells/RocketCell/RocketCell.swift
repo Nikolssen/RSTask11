@@ -15,6 +15,10 @@ class RocketCell: UICollectionViewCell {
     @IBOutlet var launchCostLabel: UILabel!
     @IBOutlet var successRateLabel: UILabel!
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var dateStackView: UIStackView!
+    @IBOutlet var costStackView: UIStackView!
+    @IBOutlet var successStackView: UIStackView!
+    
     @IBOutlet var stackViewLeadingAnchor: NSLayoutConstraint!
     
     let imageViewMask = CAShapeLayer()

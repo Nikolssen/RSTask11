@@ -16,9 +16,9 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate {
         if fromVC is LaunchListViewController && toVC is LaunchDetailsViewController {
             return LaunchNavigationTransitioning()
         }
-//        if fromVC is RocketListViewController && toVC is RocketDetailsViewController {
-//            return RocketNavigationTransitioning()
-//        }
+        if fromVC is RocketListViewController && toVC is RocketDetailsViewController {
+            return RocketNavigationTransitioning()
+        }
         return nil
     }
 }

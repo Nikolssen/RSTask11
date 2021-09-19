@@ -39,16 +39,17 @@ class RocketNavigationTransitioning: NSObject, UIViewControllerAnimatedTransitio
         titleLabel.textColor = currentCell.titleLabel.textColor
         titleLabel.font = currentCell.titleLabel.font
 
-        titleLabel.frame = currentCell.titleLabel.frame
-
-
         toViewController.view.frame = transitionContext.finalFrame(for: toViewController)
-
+        
+        let frame = currentCell.titleLabel.frame
+        titleLabel.frame = frame
+        
         containerView.addSubview(toViewController.view)
         containerView.addSubview(contentView)
         contentView.addSubview(snapshotImageView)
         contentView.addSubview(titleLabel)
-
+        
+        toViewController.stackView.alpha = 0.0
         toViewController.view.isHidden = true
         containerView.backgroundColor = nil
 
@@ -56,17 +57,16 @@ class RocketNavigationTransitioning: NSObject, UIViewControllerAnimatedTransitio
 
             contentView.frame = containerView.convert(toViewController.view.frame, from: toViewController.view)
             snapshotImageView.frame = contentView.convert(toViewController.imageView.frame, from: toViewController.view)
-            titleLabel.frame = toViewController.titleLabel.frame
-            titleLabel.textColor = .superWhite
+            titleLabel.frame = CGRect(origin: toViewController.titleLabel.frame.origin, size: CGSize(width: toViewController.view.frame.width, height: toViewController.titleLabel.frame.height))
+            titleLabel.textColor = .black
             titleLabel.font = toViewController.titleLabel.font
         }
-        animator.addCompletion{position in
+        animator.addCompletion{_ in
             toViewController.view.isHidden = false
-            titleLabel.removeFromSuperview()
-            snapshotImageView.removeFromSuperview()
             contentView.removeFromSuperview()
-            transitionContext.completeTransition(position == .end)
+            transitionContext.completeTransition(true)
             UIView.animate(withDuration: 0.15, delay: 0, options: [.transitionCurlDown], animations: {toViewController.stackView.alpha = 1.0}, completion: nil)
+
         }
 
         animator.startAnimation()
