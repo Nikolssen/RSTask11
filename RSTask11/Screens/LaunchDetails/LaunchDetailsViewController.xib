@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -39,6 +39,7 @@
                 <outlet property="rocketStackView" destination="cCG-Mc-DYS" id="tXR-GQ-bdT"/>
                 <outlet property="shadowedImageView" destination="TDx-Wx-OIV" id="MNF-09-ulo"/>
                 <outlet property="shadowedView" destination="KNj-dj-Btf" id="2MT-56-wkZ"/>
+                <outlet property="stackView" destination="Xpx-7w-n0V" id="FWc-Xi-ctl"/>
                 <outlet property="staticFireDateLabel" destination="isq-Me-NZh" id="9k8-Da-nRw"/>
                 <outlet property="staticFireDateMarker" destination="Sa5-hc-3V5" id="2gl-oe-2E7"/>
                 <outlet property="successLabel" destination="zAk-3b-uDg" id="Fj0-w2-31v"/>

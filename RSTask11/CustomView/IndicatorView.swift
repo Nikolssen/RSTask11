@@ -29,15 +29,29 @@ class IndicatorView: UIView {
     private let imageView: UIImageView = UIImageView()
     private let contentView: UIView = UIView()
 
+    init(frame: CGRect, _ forAnimation: Bool) {
+        super.init(frame: frame)
+        commonInit()
+        if (forAnimation){
+            imageView.frame = bounds.insetBy(dx: Constants.imageOffset, dy: Constants.imageOffset)
+            layer.cornerRadius = frame.height / 2
+            contentView.layer.cornerRadius = frame.height / 2
+        }
+        else {
+            setupConstraints()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
+        setupConstraints()
     }
     
     enum Constants {
@@ -47,20 +61,10 @@ class IndicatorView: UIView {
     func commonInit(){
         contentView.addSubview(imageView)
         addSubview(contentView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+
         imageView.tintColor = .cyanProcess
         imageView.image = .checkmark
-        NSLayoutConstraint.activate([
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.imageOffset),
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.imageOffset),
-            imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
+
         backgroundColor = .clear
         layer.shadowColor = UIColor(red: 0.682, green: 0.682, blue: 0.753, alpha: 0.4).cgColor
         layer.shadowOpacity = 1
@@ -80,7 +84,20 @@ class IndicatorView: UIView {
         layer1.masksToBounds = false
         
     }
-    
+    func setupConstraints() {
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.imageOffset),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.imageOffset),
+            imageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+    }
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = frame.height / 2

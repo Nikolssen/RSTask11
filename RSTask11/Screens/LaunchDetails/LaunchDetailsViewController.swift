@@ -11,6 +11,7 @@ class LaunchDetailsViewController: UIViewController {
     
     var presenter: LaunchDetailsPresenterType!
     
+    @IBOutlet var stackView: UIStackView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var indicatorView: IndicatorView!

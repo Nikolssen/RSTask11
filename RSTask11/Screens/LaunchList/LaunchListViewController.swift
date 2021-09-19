@@ -12,6 +12,7 @@ import UIKit
 final class LaunchListViewController: UICollectionViewController {
 
     var presenter: LaunchListPresenterType!
+    private var selectedCellIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,12 @@ final class LaunchListViewController: UICollectionViewController {
         super.viewWillAppear(animated)
         presenter?.viewWillBecomeActive()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedCellIndexPath = nil
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView.reloadData()
@@ -75,6 +82,7 @@ final class LaunchListViewController: UICollectionViewController {
             break
         }
     }
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -93,7 +101,15 @@ final class LaunchListViewController: UICollectionViewController {
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCellIndexPath = indexPath
         presenter.showDetailsForCell(at: indexPath.item)
+    }
+    
+    var selectedCell: UICollectionViewCell? {
+        if let indexPath = selectedCellIndexPath {
+            return collectionView.cellForItem(at: indexPath)
+        }
+        return nil
     }
 }
 

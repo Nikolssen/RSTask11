@@ -45,13 +45,16 @@
 		3F95D98A26E89E4C00ECB3D8 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */; };
 		3F95D98C26E89E5F00ECB3D8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */; };
 		3FB6612526EB972D00661134 /* Coordinator + PresenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */; };
-		3FCEB9FB26F20835000253F0 /* UINavigationControllerTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */; };
+		3FCEB9FB26F20835000253F0 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEB9FA26F20835000253F0 /* NavigationControllerDelegate.swift */; };
 		3FE2421226EF6E4E0013C76C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421026EF6E4E0013C76C /* ImageCell.swift */; };
 		3FE2421326EF6E4E0013C76C /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2421126EF6E4E0013C76C /* ImageCell.xib */; };
 		3FE2421626EF903C0013C76C /* LaunchDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421526EF903C0013C76C /* LaunchDetailsPresenter.swift */; };
 		3FE2421B26EF98500013C76C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421926EF98500013C76C /* WebViewController.swift */; };
 		3FE2421C26EF98500013C76C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FE2421A26EF98500013C76C /* WebViewController.xib */; };
 		3FE2421F26EFA0120013C76C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2421E26EFA0120013C76C /* ImageViewController.swift */; };
+		840FB0DE26F74DD90088FAF1 /* LaunchNavigationTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB0DD26F74DD90088FAF1 /* LaunchNavigationTransitioning.swift */; };
+		840FB0E226F74DEE0088FAF1 /* LaunchpadNavigationTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB0E126F74DEE0088FAF1 /* LaunchpadNavigationTransitioning.swift */; };
+		840FB0E626F74E030088FAF1 /* RocketNavigationTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB0E526F74E030088FAF1 /* RocketNavigationTransitioning.swift */; };
 		84212E7E26EBDBC6007BEDA9 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E7D26EBDBC6007BEDA9 /* Rocket.swift */; };
 		84212E8326EBE956007BEDA9 /* LaunchCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */; };
 		84212E8626EBE969007BEDA9 /* RocketCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */; };
@@ -119,13 +122,16 @@
 		3F95D98926E89E4C00ECB3D8 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3F95D98B26E89E5F00ECB3D8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		3FB6612426EB972D00661134 /* Coordinator + PresenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator + PresenterCoordinator.swift"; sourceTree = "<group>"; };
-		3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTransitions.swift; sourceTree = "<group>"; };
+		3FCEB9FA26F20835000253F0 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		3FE2421026EF6E4E0013C76C /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3FE2421126EF6E4E0013C76C /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		3FE2421526EF903C0013C76C /* LaunchDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsPresenter.swift; sourceTree = "<group>"; };
 		3FE2421926EF98500013C76C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3FE2421A26EF98500013C76C /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		3FE2421E26EFA0120013C76C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		840FB0DD26F74DD90088FAF1 /* LaunchNavigationTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNavigationTransitioning.swift; sourceTree = "<group>"; };
+		840FB0E126F74DEE0088FAF1 /* LaunchpadNavigationTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadNavigationTransitioning.swift; sourceTree = "<group>"; };
+		840FB0E526F74E030088FAF1 /* RocketNavigationTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketNavigationTransitioning.swift; sourceTree = "<group>"; };
 		84212E7D26EBDBC6007BEDA9 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		84212E8226EBE956007BEDA9 /* LaunchCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellViewData.swift; sourceTree = "<group>"; };
 		84212E8526EBE969007BEDA9 /* RocketCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCellViewData.swift; sourceTree = "<group>"; };
@@ -194,7 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				3F6E904B26E9E66F00A9FA49 /* UITabBarControllerTransitions.swift */,
-				3FCEB9FA26F20835000253F0 /* UINavigationControllerTransitions.swift */,
+				3FCEB9FA26F20835000253F0 /* NavigationControllerDelegate.swift */,
+				840FB0DD26F74DD90088FAF1 /* LaunchNavigationTransitioning.swift */,
+				840FB0E126F74DEE0088FAF1 /* LaunchpadNavigationTransitioning.swift */,
+				840FB0E526F74E030088FAF1 /* RocketNavigationTransitioning.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -581,6 +590,7 @@
 				3F6E906526EA4C3000A9FA49 /* ShadowedImageView.swift in Sources */,
 				84E0562526EE2B2000330A50 /* LaunchpadDetailsViewController.swift in Sources */,
 				3F6E906726EA4CEE00A9FA49 /* ShadowedButton.swift in Sources */,
+				840FB0E626F74E030088FAF1 /* RocketNavigationTransitioning.swift in Sources */,
 				84C8DF6C26EC934A003E3D8B /* LaunchListPresenter.swift in Sources */,
 				3FE2421B26EF98500013C76C /* WebViewController.swift in Sources */,
 				3F6E904F26E9EE3400A9FA49 /* RocketListViewController.swift in Sources */,
@@ -596,11 +606,13 @@
 				3F6E905A26EA3C4300A9FA49 /* IndicatorView.swift in Sources */,
 				84C8DF6926EC9307003E3D8B /* RocketListPresenter.swift in Sources */,
 				3F7F60E226EB327700BB537E /* NetworkService.swift in Sources */,
-				3FCEB9FB26F20835000253F0 /* UINavigationControllerTransitions.swift in Sources */,
+				3FCEB9FB26F20835000253F0 /* NavigationControllerDelegate.swift in Sources */,
+				840FB0DE26F74DD90088FAF1 /* LaunchNavigationTransitioning.swift in Sources */,
 				84E0562F26EE2B4A00330A50 /* RocketDetailsViewController.swift in Sources */,
 				3F7F60E726EB352600BB537E /* LaunchpadListViewController.swift in Sources */,
 				3F7F60EA26EB395500BB537E /* LaunchpadCell.swift in Sources */,
 				84C8DF6F26ECD6F2003E3D8B /* ImageCacher.swift in Sources */,
+				840FB0E226F74DEE0088FAF1 /* LaunchpadNavigationTransitioning.swift in Sources */,
 				3F95D97226E883D500ECB3D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6V47L895;
 				INFOPLIST_FILE = RSTask11Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G6V47L895;
 				INFOPLIST_FILE = RSTask11Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -773,7 +787,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
