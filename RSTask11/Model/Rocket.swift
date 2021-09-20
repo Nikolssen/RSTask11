@@ -14,6 +14,7 @@ struct Rocket {
     }
     
     struct FirstStage: Decodable {
+
         enum CodingKeys: String, CodingKey {
             case thrust_sea_level, thrust_vacuum, reusable, engines, fuel_amount_tons, burn_time_sec
         }
@@ -38,9 +39,26 @@ struct Rocket {
             self.fuel = try container.decode(Double.self, forKey: .fuel_amount_tons)
             self.burnTime = try? container.decode(Int.self, forKey: .burn_time_sec)
         }
+        
+        init(thrustSeaLevel: Int, thrustVacuum: Int, isReusable: Bool, engines: Int, fuel: Double, burnTime: Int?) {
+            self.thrustSeaLevel = thrustSeaLevel
+            self.thrustVacuum = thrustVacuum
+            self.isReusable = isReusable
+            self.engines = engines
+            self.fuel = fuel
+            self.burnTime = burnTime
+        }
     }
     
     struct SecondStage: Decodable {
+        init(thrust: Int, isReusable: Bool, engines: Int, fuel: Double, burnTime: Int?) {
+            self.thrust = thrust
+            self.isReusable = isReusable
+            self.engines = engines
+            self.fuel = fuel
+            self.burnTime = burnTime
+        }
+        
         enum CodingKeys: String, CodingKey{
             case thrust, reusable, engines, fuel_amount_tons, burn_time_sec
         }
@@ -64,6 +82,7 @@ struct Rocket {
     }
     
     struct Engine: Decodable {
+        
         enum CodingKeys: String, CodingKey {
             case type, layout, version, propellant_1, propellant_2, number
         }
@@ -83,6 +102,15 @@ struct Rocket {
             self.version = try container.decode(String.self, forKey: .version)
             self.propellant1 = try container.decode(String.self, forKey: .propellant_1)
             self.propellant2 = try container.decode(String.self, forKey: .propellant_2)
+        }
+        
+        init(type: String, layout: String?, number: Int, version: String, propellant1: String, propellant2: String) {
+            self.type = type
+            self.layout = layout
+            self.number = number
+            self.version = version
+            self.propellant1 = propellant1
+            self.propellant2 = propellant2
         }
     }
     

@@ -79,7 +79,7 @@ class RocketDetailsPresenter: RocketDetailsPresenterType {
     }
     
     var mass: String {
-        "\(rocket.mass)kg"
+        "\(rocket.mass) kg"
     }
     
     var height: String {
@@ -87,7 +87,7 @@ class RocketDetailsPresenter: RocketDetailsPresenterType {
     }
     
     var diameter: String{
-        "\(rocket.height) meters"
+        "\(rocket.diameter) meters"
     }
     
     var firstStageReusable: String {

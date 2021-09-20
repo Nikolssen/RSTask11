@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F067BE026F4D50000AC8EF6 /* LaunchpadTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F067BDF26F4D50000AC8EF6 /* LaunchpadTest.swift */; };
-		3F067BE226F4D50D00AC8EF6 /* LaunchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F067BE126F4D50D00AC8EF6 /* LaunchTest.swift */; };
-		3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC626F344B600240305 /* RocketTest.swift */; };
 		3F2E8BC926F3454700240305 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BC826F3454700240305 /* Mocks.swift */; };
 		3F2E8BCB26F35DBC00240305 /* RocketDetailsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */; };
 		3F38F93826F084C000A6D7A5 /* ShadowedMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */; };
@@ -80,11 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F067BDF26F4D50000AC8EF6 /* LaunchpadTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadTest.swift; sourceTree = "<group>"; };
-		3F067BE126F4D50D00AC8EF6 /* LaunchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTest.swift; sourceTree = "<group>"; };
 		3F2E8BBC26F3446800240305 /* RSTask11Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSTask11Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2E8BC026F3446800240305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F2E8BC626F344B600240305 /* RocketTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTest.swift; sourceTree = "<group>"; };
 		3F2E8BC826F3454700240305 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailsTest.swift; sourceTree = "<group>"; };
 		3F38F93726F084C000A6D7A5 /* ShadowedMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedMapView.swift; sourceTree = "<group>"; };
@@ -164,20 +158,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F067BDE26F4D49400AC8EF6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				3F2E8BC626F344B600240305 /* RocketTest.swift */,
-				3F067BDF26F4D50000AC8EF6 /* LaunchpadTest.swift */,
-				3F067BE126F4D50D00AC8EF6 /* LaunchTest.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3F2E8BBD26F3446800240305 /* RSTask11Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3F067BDE26F4D49400AC8EF6 /* Model */,
 				3F2E8BC026F3446800240305 /* Info.plist */,
 				3F2E8BC826F3454700240305 /* Mocks.swift */,
 				3F2E8BCA26F35DBC00240305 /* RocketDetailsTest.swift */,
@@ -559,10 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F067BE226F4D50D00AC8EF6 /* LaunchTest.swift in Sources */,
 				3F2E8BCB26F35DBC00240305 /* RocketDetailsTest.swift in Sources */,
-				3F2E8BC726F344B600240305 /* RocketTest.swift in Sources */,
-				3F067BE026F4D50000AC8EF6 /* LaunchpadTest.swift in Sources */,
 				3F2E8BC926F3454700240305 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
