@@ -103,6 +103,6 @@ class NetworkServiceMock : NetworkServiceType {
 
 class ImageCacherMock : ImageCacherType {
     func loadImage(urlString: String, completion: @escaping (UIImage) -> Void) {
-        
+        completion(UIImage())
     }
 }

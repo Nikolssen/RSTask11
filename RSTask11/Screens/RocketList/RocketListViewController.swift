@@ -24,7 +24,7 @@ final class RocketListViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.viewWillBecomeActive()
+        presenter.fetchData()
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     

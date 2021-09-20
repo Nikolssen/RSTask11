@@ -113,6 +113,16 @@ class RocketDetailsTest: XCTestCase {
         XCTAssertTrue(self.coordinator.didOpenWebLink)
     }
     
+    func testImageCaching() throws {
+        var flag = false
+        let expectation = expectation(description: #function)
+        presenter.loadTitleImage(callback: {image in
+            flag = true
+            XCTAssertTrue(flag)
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 3)
+    }
     
 
     static let fullRocket: Rocket = Rocket(name: "Rocket", height: 20.0, diameter: 30.0, mass: 5000, firstStage: Rocket.FirstStage(thrustSeaLevel: 560, thrustVacuum: 340, isReusable: true, engines: 2, fuel: 45555, burnTime: 450), secondStage: Rocket.SecondStage(thrust: 20, isReusable: false, engines: 2, fuel: 23, burnTime: 500), engine: Rocket.Engine(type: "Any", layout: "Auto", number: 4, version: "Beta", propellant1: "Prop", propellant2: "Prop2"), landingLegs: Rocket.LandingLegs(material: "Steel", number: 2), isActive: true, successRate: 40, firstLaunch: "2018-02-06", launchCost: 200000, images: ["https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg"], wikipediaLink: "https://en.wikipedia.org/wiki/Falcon_Heavy", id: "0xFF", description: "The description")

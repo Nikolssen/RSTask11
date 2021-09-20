@@ -14,7 +14,7 @@ protocol LaunchListPresenterType {
     var coordinator: LaunchListPresenterCoordinator {get}
     var service: ServiceType {get}
     
-    func viewWillBecomeActive()
+    func fetchData()
     func viewDataForCell(at index: Int) -> LaunchCellViewData
     func showDetailsForCell(at index: Int)
     func numberOfCells() -> Int
@@ -24,6 +24,9 @@ protocol LaunchListPresenterType {
 
 protocol LaunchListPresenterDelegate: AnyObject {
     func updateCollectionView()
+    func showErrorAlert(retryCallback: (() -> Void)?)
+    func showActivity()
+    func hideActivity()
 }
 
 protocol LaunchListPresenterCoordinator {
@@ -42,7 +45,9 @@ class LaunchListPresenter: LaunchListPresenterType {
     private var sortingOption: Launch.SortingOptions?
     private var sortDescending = true
     private var ids: [String]?
-    func viewWillBecomeActive() {
+    private var retryAttempts = 0
+    
+    func fetchData() {
         if launches.isEmpty {
             let completion: (Result<[Launch], Error>) -> Void = {[weak self]
                 result in
@@ -58,13 +63,19 @@ class LaunchListPresenter: LaunchListPresenterType {
                         
                         self?.displayedLaunches = launches
                         self?.delegate?.updateCollectionView()
+                        self?.delegate?.hideActivity()
                         
                     case .failure(_):
-                        print("There is an error")
+                        self?.delegate?.hideActivity()
+                        self?.retryAttempts += 1
+                        if let retryAttempts = self?.retryAttempts {
+                            self?.delegate?.showErrorAlert(retryCallback: (retryAttempts < 5) ? self?.fetchData : nil)
+                            
+                        }
                     }
                 }
             }
-            
+            delegate?.showActivity()
             DispatchQueue.global(qos: .utility).async {
                 self.service.networkService.get(request: .launches, callback: completion)
             }

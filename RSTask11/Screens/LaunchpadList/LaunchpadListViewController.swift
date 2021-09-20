@@ -22,7 +22,7 @@ final class LaunchpadListViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.viewWillBecomeActive()
+        presenter.fetchData()
     }
     
     override func viewDidAppear(_ animated: Bool) {

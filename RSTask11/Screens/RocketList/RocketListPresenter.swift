@@ -14,7 +14,7 @@ protocol RocketListPresenterType {
     var coordinator: RocketListPresenterCoordinator {get}
     var service: ServiceType {get}
     
-    func viewWillBecomeActive()
+    func fetchData()
     func viewDataForCell(at index: Int) -> RocketCellViewData
     func showDetailsForCell(at index: Int)
     func numberOfCells() -> Int
@@ -23,6 +23,9 @@ protocol RocketListPresenterType {
 
 protocol RocketListPresenterDelegate: AnyObject {
     func updateCollectionView()
+    func showErrorAlert(retryCallback: (() -> Void)?)
+    func showActivity()
+    func hideActivity()
 }
 
 protocol RocketListPresenterCoordinator {
@@ -38,8 +41,9 @@ class RocketListPresenter: RocketListPresenterType {
     private var displayRockets: [Rocket] = []
     var sortingOption: Rocket.SortingOptions?
     private let ids: [String]?
+    private var retryAttempts = 0
     
-    func viewWillBecomeActive() {
+    func fetchData() {
         if rockets.isEmpty {
             let completion: (Result<[Rocket], Error>) -> Void = {[weak self]
                 result in
@@ -52,14 +56,20 @@ class RocketListPresenter: RocketListPresenterType {
                         else {
                             self?.rockets = rockets
                         }
-                        
                         self?.delegate?.updateCollectionView()
+                        self?.delegate?.hideActivity()
                         
                     case .failure(_):
-                        print("There is an error")
+                        self?.delegate?.hideActivity()
+                        self?.retryAttempts += 1
+                        if let retryAttempts = self?.retryAttempts {
+                            self?.delegate?.showErrorAlert(retryCallback: (retryAttempts < 5) ? self?.fetchData : nil)
+                        }
+                        
                     }
                 }
             }
+            delegate?.showActivity()
             DispatchQueue.global(qos: .utility).async {
                 self.service.networkService.get(request: .rockets, callback: completion)
             }

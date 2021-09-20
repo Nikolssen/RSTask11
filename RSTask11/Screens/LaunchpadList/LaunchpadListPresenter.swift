@@ -14,7 +14,7 @@ protocol LaunchpadListPresenterType {
     var coordinator: LaunchpadListPresenterCoordinator {get}
     var service: ServiceType {get}
     
-    func viewWillBecomeActive()
+    func fetchData()
     func viewDataForCell(at index: Int) -> LaunchpadCellViewData
     func showDetailsForCell(at index: Int)
     func numberOfCells() -> Int
@@ -24,6 +24,9 @@ protocol LaunchpadListPresenterType {
 
 protocol LaunchpadListPresenterDelegate: AnyObject {
     func updateCollectionView()
+    func showErrorAlert(retryCallback: (() -> Void)?)
+    func showActivity()
+    func hideActivity()
 }
 
 protocol LaunchpadListPresenterCoordinator {
@@ -42,8 +45,9 @@ class LaunchpadListPresenter: LaunchpadListPresenterType {
     private var filterOption: Launchpad.FilterOptions = .all
     private var sortingOption: Launchpad.SortingOptions?
     private var sortDescending = true
+    private var retryAttempts = 0
     
-    func viewWillBecomeActive() {
+    func fetchData() {
         if launchpads.isEmpty {
             let completion: (Result<[Launchpad], Error>) -> Void = {[weak self]
                 result in
@@ -53,13 +57,18 @@ class LaunchpadListPresenter: LaunchpadListPresenterType {
                         self?.launchpads = launchpads
                         self?.displayedLaunchpads = launchpads
                         self?.delegate?.updateCollectionView()
+                        self?.delegate?.hideActivity()
                         
                     case .failure(_):
-                        print("There is an error")
+                        self?.delegate?.hideActivity()
+                        self?.retryAttempts += 1
+                        if let retryAttempts = self?.retryAttempts {
+                            self?.delegate?.showErrorAlert(retryCallback: (retryAttempts < 5) ? self?.fetchData : nil)
+                        }
                     }
                 }
             }
-            
+            delegate?.showActivity()
             DispatchQueue.global(qos: .utility).async {
                 self.service.networkService.get(request: .launchpads, callback: completion)
             }
